@@ -6,13 +6,18 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 3rem;
-  /* background-color: ; */
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  transition: 0.5s;
 }
 .logo{
   border: 1px red solid;
   width: 100%;
   max-width: 10rem;
   height: 4.5rem;
+  cursor: pointer;
 }
 .navLinks{
   border: 1px red solid;
@@ -27,6 +32,7 @@
   font-weight: bold;
   font-size: 1.3rem;
   padding: 0.3rem 0.9rem;
+  color: #fff;
   position: relative;
   cursor: pointer;
   transition: 0.5s;
@@ -47,4 +53,11 @@
 .links:hover span{
   transform: scale(1);
   opacity: 1;
+}
+.scroll{
+  background-color: blue;
+  transition: 0.5s;
+}
+.change{
+  color: rgb(255, 180, 40);
 }
