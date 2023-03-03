@@ -37,7 +37,17 @@
 .change {
   color: rgb(255, 180, 40);
 }
-@media screen and (max-width: 900px) {
+
+@media screen and (max-width: 1000px) {
+  .navLinks {
+  max-width: 23rem;
+}
+.links {
+  font-size: 1rem;
+}
+}
+
+@media screen and (max-width: 650px) {
   .navLinks {
     display: none;
   }

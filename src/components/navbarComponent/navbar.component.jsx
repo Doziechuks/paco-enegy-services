@@ -1,13 +1,19 @@
 import { useState } from "react";
 import classes from "./navbar.module.css";
 
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
 
 import NavbarOptions from "../navbarOpions/navOptions.component";
 import MobileNavbar from "../mobileNavbar/mobileNavbar.component";
 
-const Navbar = () => {
+import { selectToggleNavbar } from "../../redux/navToggle/navToggleSelector";
+import { handleToggleNavbar } from "../../redux/navToggle/navToggleAction";
+import { createStructuredSelector } from "reselect";
+import { connect } from "react-redux";
+
+const Navbar = ({ showNavbar, setShowNavbar }) => {
   const [scrollNav, setScrollNav] = useState(false);
+  console.log({showNavbar});
 
   const changeBackground = () => {
     if (window.scrollY >= 50) {
@@ -24,7 +30,7 @@ const Navbar = () => {
       >
         <img src="" className={classes.logo} />
         <NavbarOptions />
-        <div className={classes.handBurggerBox}>
+        <div className={classes.handBurggerBox} onClick= {() => setShowNavbar()}>
           <FaBars className={classes.icon} />
         </div>
       </div>
@@ -33,4 +39,11 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+const mapStateToProps = createStructuredSelector({
+  showNavbar: selectToggleNavbar
+});
+const mapDispatchToProps = dispatch => ({
+  setShowNavbar: () => dispatch(handleToggleNavbar())
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Navbar);
