@@ -1,4 +1,4 @@
-import classes from './indexHeaderItems.module.css';
+import classes from "./indexHeaderItems.module.css";
 
 const IndexHeaderItems = ({ item }) => {
   const { title, imageUrl, info } = item;
@@ -13,6 +13,6 @@ const IndexHeaderItems = ({ item }) => {
       <p>{info}</p>
     </div>
   );
-}
- 
+};
+
 export default IndexHeaderItems;

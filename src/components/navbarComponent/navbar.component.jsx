@@ -1,6 +1,11 @@
 import { useState } from "react";
 import classes from "./navbar.module.css";
 
+import { FaBars, FaTimes } from "react-icons/fa";
+
+import NavbarOptions from "../navbarOpions/navOptions.component";
+import MobileNavbar from "../mobileNavbar/mobileNavbar.component";
+
 const Navbar = () => {
   const [scrollNav, setScrollNav] = useState(false);
 
@@ -13,34 +18,17 @@ const Navbar = () => {
   };
   window.addEventListener("scroll", changeBackground);
   return (
-    <nav className={`${classes.container} ${scrollNav ? classes.scroll : ""}`}>
-      <img src="" className={classes.logo} />
-      <div className={classes.navLinks}>
-        <a
-          href="#"
-          className={`${classes.links} ${scrollNav ? classes.change : ""}`}
-        >
-          home <span></span>
-        </a>
-        <a
-          href="#"
-          className={`${classes.links} ${scrollNav ? classes.change : ""}`}
-        >
-          about <span></span>
-        </a>
-        <a
-          href="#"
-          className={`${classes.links} ${scrollNav ? classes.change : ""}`}
-        >
-          services <span></span>
-        </a>
-        <a
-          href="#"
-          className={`${classes.links} ${scrollNav ? classes.change : ""}`}
-        >
-          contact <span></span>
-        </a>
+    <nav className={classes.wrapper}>
+      <div
+        className={`${classes.container} ${scrollNav ? classes.scroll : ""}`}
+      >
+        <img src="" className={classes.logo} />
+        <NavbarOptions />
+        <div className={classes.handBurggerBox}>
+          <FaBars className={classes.icon} />
+        </div>
       </div>
+      <MobileNavbar />
     </nav>
   );
 };

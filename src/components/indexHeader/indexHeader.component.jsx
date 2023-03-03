@@ -18,24 +18,22 @@ const IndexHeader = () => {
      return () => clearInterval(timerId);
    }, [index]);
 
-  return ( 
+  return (
     <section className={classes.container}>
-      {
-        data.map((item, itemIndex) => {
-          return (
-            <div
-              key={item.id}
-              className={`${classes.item} ${
-                index === itemIndex ? classes.show : ""
-              }`}
-            >
-              <IndexHeaderItems item={item} />
-            </div>
-          );
-        })
-      }
+      {data.map((item, itemIndex) => {
+        return (
+          <div
+            key={item.id}
+            className={`${classes.item} ${
+              index === itemIndex ? classes.show : ""
+            }`}
+          >
+            <IndexHeaderItems item={item} />
+          </div>
+        );
+      })}
     </section>
-   );
+  );
 }
  
 export default IndexHeader;
