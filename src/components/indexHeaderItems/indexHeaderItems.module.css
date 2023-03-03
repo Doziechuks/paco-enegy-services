@@ -24,7 +24,8 @@
 .wrapper p {
   width: 100%;
   max-width: 50rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  line-height: 2rem;
   color: #fff;
   text-align: center;
   font-weight: 1000;
@@ -46,7 +47,8 @@
     text-align: center;
   }
   .wrapper p {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
     text-align: center;
   }
 }
