@@ -1,12 +1,21 @@
 import classes from './navbarOptions.module.css';
 
-import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+
+import { useState, useEffect } from 'react';
 
 import { connect } from 'react-redux';
 import { handleToggleNavbar } from '../../redux/navToggle/navToggleAction';
 
 const NavbarOptions = ({ mobileNav, setShowNavbar }) => {
   const [scrollNav, setScrollNav] = useState(false);
+  const [path, setPathName] = useState('');
+  const {pathname} = useLocation();
+
+    useEffect(() => {
+      setPathName(pathname);
+    }, [pathname]);
 
   const changeBackground = () => {
     if (window.scrollY >= 50) {
@@ -23,42 +32,42 @@ const NavbarOptions = ({ mobileNav, setShowNavbar }) => {
         mobileNav ? classes.mobileNavLinks : ""
       }`}
     >
-      <a
-        href="#"
+      <Link
+        to="/"
         className={`${classes.links} ${scrollNav ? classes.change : ""} ${
           mobileNav ? classes.mobileLinks : ""
-        }`}
+        } ${path === "/" ? classes.active : ""}`}
         onClick={() => setShowNavbar()}
       >
         home <span></span>
-      </a>
-      <a
-        href="#"
+      </Link>
+      <Link
+        to="/about"
         className={`${classes.links} ${scrollNav ? classes.change : ""} ${
           mobileNav ? classes.mobileLinks : ""
-        }`}
+        } ${path.includes("/about") ? classes.active : ""}`}
         onClick={() => setShowNavbar()}
       >
         about <span></span>
-      </a>
-      <a
-        href="#"
+      </Link>
+      <Link
+        to="/services"
         className={`${classes.links} ${scrollNav ? classes.change : ""} ${
           mobileNav ? classes.mobileLinks : ""
-        }`}
+        } ${path.includes("/services") ? classes.active : ""}`}
         onClick={() => setShowNavbar()}
       >
         services <span></span>
-      </a>
-      <a
-        href="#"
+      </Link>
+      <Link
+        to="/contactus"
         className={`${classes.links} ${scrollNav ? classes.change : ""} ${
           mobileNav ? classes.mobileLinks : ""
-        }`}
+        } ${path.includes("/contactus") ? classes.active : ""}`}
         onClick={() => setShowNavbar()}
       >
         contact <span></span>
-      </a>
+      </Link>
     </div>
   );
 }

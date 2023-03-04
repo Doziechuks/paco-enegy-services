@@ -30,7 +30,7 @@
   opacity: 0;
   transition: 0.5s;
 }
-.links:hover span {
+.links:hover span, .active span {
   transform: scale(1);
   opacity: 1;
 }

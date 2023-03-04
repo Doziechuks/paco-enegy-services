@@ -1,6 +1,8 @@
 import { useState } from "react";
 import classes from "./navbar.module.css";
 
+import { useHistory } from "react-router-dom";
+
 import { FaBars } from "react-icons/fa";
 
 import NavbarOptions from "../navbarOpions/navOptions.component";
@@ -13,7 +15,7 @@ import { connect } from "react-redux";
 
 const Navbar = ({ showNavbar, setShowNavbar }) => {
   const [scrollNav, setScrollNav] = useState(false);
-  console.log({showNavbar});
+  const history = useHistory();
 
   const changeBackground = () => {
     if (window.scrollY >= 50) {
@@ -28,7 +30,7 @@ const Navbar = ({ showNavbar, setShowNavbar }) => {
       <div
         className={`${classes.container} ${scrollNav ? classes.scroll : ""}`}
       >
-        <img src="" className={classes.logo} />
+        <img src="" className={classes.logo} onClick={() => history.push('/')} />
         <NavbarOptions />
         <div className={classes.handBurggerBox} onClick= {() => setShowNavbar()}>
           <FaBars className={classes.icon} />
