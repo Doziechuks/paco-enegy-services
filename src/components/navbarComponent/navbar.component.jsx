@@ -30,7 +30,7 @@ const Navbar = ({ showNavbar, setShowNavbar }) => {
       <div
         className={`${classes.container} ${scrollNav ? classes.scroll : ""}`}
       >
-        <img src="" className={classes.logo} onClick={() => history.push('/')} />
+        <img src="" className={classes.logo} alt='logo' onClick={() => history.push('/')} />
         <NavbarOptions />
         <div className={classes.handBurggerBox} onClick= {() => setShowNavbar()}>
           <FaBars className={classes.icon} />
