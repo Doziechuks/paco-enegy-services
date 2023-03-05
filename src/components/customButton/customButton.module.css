@@ -1,0 +1,23 @@
+.visitPage{
+  padding: 0.5rem 1.5rem;
+  background: transparent;
+  font-size: 1.3rem;
+  border: 1px black solid;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.visitPage span{
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 180, 40);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: translateX(-100%);
+  transition: 0.5s;
+}
+.visitPage:hover span {
+  transform: translate(0);
+}
