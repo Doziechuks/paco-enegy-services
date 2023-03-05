@@ -3,20 +3,21 @@ import { useHistory } from 'react-router-dom';
 import classes from './aboutSection.module.css';
 
 import CustomButton from '../customButton/customButton';
+import Title from '../titleComponent/title.component';
 
 const AboutSection = () => {
 
-  const [showTitle, setShowTitle] = useState(false);
+  const [showSectionSlide, setShowSectionSlide] = useState(false);
   const [mobileSlide, setMobileSlide] = useState(false);
   const [mobileSlide2, setMobileSlide2] = useState(false);
   const [mobileSlideButton, setMobileSlideButton] = useState(false);
   const history = useHistory();
 
   const showSection = () => {
-    if (window.scrollY >= 50) {
-      setShowTitle(true);
+    if (window.scrollY >= 250) {
+      setShowSectionSlide(true);
     } else {
-      setShowTitle(false);
+      setShowSectionSlide(false);
     }
     if(window.scrollY >= 700){
       setMobileSlide(true);
@@ -38,18 +39,11 @@ const AboutSection = () => {
 
   return (
     <section className={classes.wrapper}>
-      <div className={classes.titleBox}>
-        <h1
-          className={`${classes.title} ${showTitle ? classes.showTitle : ""}`}
-        >
-          {" "}
-          <span>about</span> our comapny
-        </h1>
-      </div>
+      <Title heading={'about'} title={'our company'} isAbout />
       <div className={classes.contentBox}>
         <div
           className={`${classes.background} ${
-            showTitle ? classes.showBackground : ""
+            showSectionSlide ? classes.showBackground : ""
           }`}
           style={{
             backgroundImage: "url('./images/solar.jpg')",
@@ -57,7 +51,7 @@ const AboutSection = () => {
         />
         <p
           className={`${classes.content} ${
-            showTitle ? classes.showBackground : ""
+            showSectionSlide ? classes.showBackground : ""
           }`}
         >
           <span
@@ -90,7 +84,11 @@ const AboutSection = () => {
             repudiandae pariatur dicta tempora facere voluptatum itaque
             distinctio impedit non obcaecati dolore, accusantium quidem quasi
           </span>
-          <div className={`${classes.buttonBox} ${mobileSlideButton ? classes.mobileShow : ''}`}>
+          <div
+            className={`${classes.buttonBox} ${
+              mobileSlideButton ? classes.mobileShow : ""
+            }`}
+          >
             <CustomButton onClick={() => history.push("/about")}>
               more info
             </CustomButton>
