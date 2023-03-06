@@ -6,6 +6,7 @@
   border: 3px rgb(255, 180, 40) solid;
   outline: none;
   margin-bottom: 1rem;
+  background-color: transparent;
 }
 
 .formInput::placeholder{
@@ -16,4 +17,11 @@
 .smallWidth{
   width: 48%;
   margin-bottom: 0;
+}
+
+@media screen and (max-width: 650px) {
+  .smallWidth{
+  width: 100%;
+  margin-bottom: 1rem;
+}
 }

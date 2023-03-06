@@ -4,6 +4,8 @@
   max-width: 40rem;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 0.3em 0.5em rgba(0, 0, 0, 0.3);
+  padding: 1.5rem;
 }
 .nameEmail {
   border: 1px red solid;
@@ -22,8 +24,17 @@
   border-radius: 0.3rem;
   font-size: 1.4rem;
   outline: none;
+  margin-bottom: 1rem;
+  background: transparent;
 }
 .messages::placeholder{
   text-transform: capitalize;
   font-size: 1.2rem;
+}
+
+@media screen and (max-width: 650px) {
+.nameEmail {
+  flex-direction: column;
+  margin-bottom: 0;
+}
 }

@@ -1,11 +1,11 @@
 import classes from './customButton.module.css';
 
-const CustomButton = ({ children, isVisit, isGetToUs, ...otherProps }) => {
+const CustomButton = ({ children, isVisit, isGetToUs,isSubmit, ...otherProps }) => {
   return (
     <button
       className={`${classes.visitPage} ${isVisit && classes.visit} ${
-        isGetToUs && classes.getToUs
-      }`}
+        isSubmit && classes.submit
+      } ${isGetToUs && classes.getToUs}`}
       {...otherProps}
     >
       {children} <span></span>

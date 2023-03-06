@@ -6,6 +6,7 @@
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+  background-color: #f2f0f8;
 }
 
 .contactBox{
