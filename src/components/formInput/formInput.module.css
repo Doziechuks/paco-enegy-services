@@ -1,0 +1,19 @@
+.formInput{
+  width: 100%;
+  padding: 0.4rem;
+  border-radius: 0.3rem;
+  font-size: 1.4rem;
+  border: 3px rgb(255, 180, 40) solid;
+  outline: none;
+  margin-bottom: 1rem;
+}
+
+.formInput::placeholder{
+  text-transform: capitalize;
+  font-size: 1.2rem;
+}
+
+.smallWidth{
+  width: 48%;
+  margin-bottom: 0;
+}

@@ -88,18 +88,4 @@
   .background {
     height: 25rem;
   }
-  /* .content {
-    overflow: hidden;
-  }
-  .content span {
-    transform: translateY(30%);
-    transition: 2s ease-in-out;
-  }
-  .content button {
-    transform: translateY(100%);
-    transition: 2s ease-in-out;
-  }
-  .mobileShow {
-    transform: translateY(0);
-  } */
 }
