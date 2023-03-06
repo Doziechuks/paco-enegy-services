@@ -25,3 +25,8 @@
 .showTitle {
   transform: translateY(0);
 }
+@media screen and (max-width: 650px) {
+  .title{
+    font-size: 2rem;
+  }
+}

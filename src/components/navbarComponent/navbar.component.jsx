@@ -33,7 +33,7 @@ const Navbar = ({ showNavbar, setShowNavbar }) => {
         <img src="" className={classes.logo} alt='logo' onClick={() => history.push('/')} />
         <NavbarOptions />
         <div className={classes.handBurggerBox} onClick= {() => setShowNavbar()}>
-          <FaBars className={classes.icon} />
+          <FaBars className={`${classes.icon} ${scrollNav ? classes.change : ''}`} />
         </div>
       </div>
       <MobileNavbar />

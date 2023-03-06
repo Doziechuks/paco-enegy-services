@@ -61,5 +61,10 @@
     width: 100%;
     height: 100%;
     color: #fff;
+    transition: all 0.5s ease-in-out;
+  }
+  .change{
+    color: rgb(255, 180, 40);
+    transition: all 0.5s ease-in-out;
   }
 }
