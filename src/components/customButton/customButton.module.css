@@ -21,3 +21,16 @@
 .visitPage:hover span {
   transform: translate(0);
 }
+.visit{
+  width: 100%;
+}
+.getToUs{
+  width: 100%;
+  background-color: rgb(3, 160, 3);
+  border: none;
+  color: #fff;
+  transition: 0.5s;
+}
+.getToUs:hover{
+  background-color: rgb(11, 128, 11);
+}

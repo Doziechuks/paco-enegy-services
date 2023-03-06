@@ -7,3 +7,24 @@
   align-items: center;
   overflow: hidden;
 }
+.servicesBox{
+  border: 1px red solid;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1100px) {
+  .servicesBox{
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 650px) {
+  .wrapper{
+    padding: 4rem 1.5rem;
+  }
+  .servicesBox{
+    flex-direction: column;
+  }
+}
