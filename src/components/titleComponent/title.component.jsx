@@ -18,7 +18,7 @@ const Title = ({ heading, title, isService, isAbout, isContact }) => {
     } else {
       setShowServicesTitle(false);
     }
-    if (window.scrollY >= 1600) {
+    if (window.scrollY >= 1500) {
       setShowContactTitle(true);
     } else {
       setShowContactTitle(false);

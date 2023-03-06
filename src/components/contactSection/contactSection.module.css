@@ -16,6 +16,7 @@
   align-items: flex-start;
   justify-content: center;
   gap: 4rem;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 1000px) {

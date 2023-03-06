@@ -11,10 +11,21 @@ const ContactForm = () => {
   const [title, setTitle] = useState("");
   const [message, setMessage] = useState("");
 
+  const [showSectionSlide, setShowSectionSlide] = useState(false);
+
+  const showSection = () => {
+    if (window.scrollY >= 1600) {
+      setShowSectionSlide(true);
+    } else {
+      setShowSectionSlide(false);
+    }
+  };
+  window.addEventListener("scroll", showSection);
+
   const form = useRef();
-const serviceId = `${process.env.REACT_APP_EMAILJS_SERVICE_ID}`;
-const templateId = `${process.env.REACT_APP_EMAILJS_TEMPLATE_ID}`;
-const publicKey = `${process.env.REACT_APP_EMAILJS_PUBLIC_KEY}`;
+  const serviceId = `${process.env.REACT_APP_EMAILJS_SERVICE_ID}`;
+  const templateId = `${process.env.REACT_APP_EMAILJS_TEMPLATE_ID}`;
+  const publicKey = `${process.env.REACT_APP_EMAILJS_PUBLIC_KEY}`;
 
   const handleSendEmail = async (e) => {
     e.preventDefault();
@@ -30,8 +41,8 @@ const publicKey = `${process.env.REACT_APP_EMAILJS_PUBLIC_KEY}`;
   };
 
   const handleName = (e) => {
-    setName(e.target.value)
-  }
+    setName(e.target.value);
+  };
   const handleEmail = (e) => {
     setEmail(e.target.value);
   };
@@ -43,7 +54,13 @@ const publicKey = `${process.env.REACT_APP_EMAILJS_PUBLIC_KEY}`;
   };
 
   return (
-    <form ref={form} onSubmit={handleSendEmail} className={classes.container}>
+    <form
+      ref={form}
+      onSubmit={handleSendEmail}
+      className={`${classes.container} ${
+        showSectionSlide ? classes.showSlide : ""
+      }`}
+    >
       <div className={classes.nameEmail}>
         <FormInput
           type="text"
@@ -80,7 +97,9 @@ const publicKey = `${process.env.REACT_APP_EMAILJS_PUBLIC_KEY}`;
         required
         className={classes.messages}
       />
-      <CustomButton type='submit' isSubmit>submit</CustomButton>
+      <CustomButton type="submit" isSubmit>
+        submit
+      </CustomButton>
     </form>
   );
 };

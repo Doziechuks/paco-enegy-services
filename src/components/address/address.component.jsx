@@ -1,10 +1,24 @@
 import classes from './address.module.css';
 
+import { useState } from 'react';
+
 import { BsFacebook } from "react-icons/bs";
 
 const Address = () => {
+  const [showSectionSlide, setShowSectionSlide] = useState(false);
+
+    const showSection = () => {
+      if (window.scrollY >= 1600) {
+        setShowSectionSlide(true);
+      } else {
+        setShowSectionSlide(false);
+      }
+      
+    };
+    window.addEventListener("scroll", showSection);
+
   return (
-    <div className={classes.wrapper}>
+    <div className={`${classes.wrapper} ${showSectionSlide ? classes.showSlide : ''}`}>
       <h1 className={classes.title}>
         <span> how can we</span> help you?
       </h1>

@@ -6,6 +6,11 @@
   flex-direction: column;
   box-shadow: 0 0.3em 0.5em rgba(0, 0, 0, 0.3);
   padding: 1.5rem;
+  transform: translateX(110%);
+  transition: all 2s ease-in-out;
+}
+.showSlide{
+  transform: translateX(0);
 }
 .nameEmail {
   border: 1px red solid;
