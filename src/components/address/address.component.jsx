@@ -2,7 +2,6 @@ import classes from './address.module.css';
 
 import { useState } from 'react';
 
-import { BsFacebook } from "react-icons/bs";
 
 const Address = () => {
   const [showSectionSlide, setShowSectionSlide] = useState(false);
