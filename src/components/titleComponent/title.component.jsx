@@ -2,9 +2,10 @@ import classes from "./title.module.css";
 
 import { useState } from "react";
 
-const Title = ({ heading, title, isService, isAbout, isContact }) => {
+const Title = ({ heading, title, isService, isAbout, isContact, isTestimonial }) => {
   const [showAboutTitle, setShowAboutTitle] = useState(false);
   const [showServicestTitle, setShowServicesTitle] = useState(false);
+  const [showTestimonialTitle, setShowTestimonialTitle] = useState(false);
   const [showContactTitle, setShowContactTitle] = useState(false);
 
   const showSection = () => {
@@ -18,6 +19,11 @@ const Title = ({ heading, title, isService, isAbout, isContact }) => {
     } else {
       setShowServicesTitle(false);
     }
+     if (window.scrollY >= 1500) {
+       setShowTestimonialTitle(true);
+     } else {
+       setShowTestimonialTitle(false);
+     }
     if (window.scrollY >= 1500) {
       setShowContactTitle(true);
     } else {
@@ -33,6 +39,8 @@ const Title = ({ heading, title, isService, isAbout, isContact }) => {
           isAbout && showAboutTitle ? classes.showTitle : ""
         } ${isService && showServicestTitle ? classes.showTitle : ""} ${
           isContact && showContactTitle ? classes.showTitle : ""
+        } ${isTestimonial && showTestimonialTitle ? classes.showTitle : ""} ${
+          isTestimonial ? classes.colour : ""
         }`}
       >
         {" "}

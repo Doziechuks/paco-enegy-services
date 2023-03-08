@@ -22,6 +22,9 @@
 .title span {
   color: rgb(255, 180, 40);
 }
+.colour{
+  color: #fff;
+}
 .showTitle {
   transform: translateY(0);
 }

@@ -1,0 +1,54 @@
+.container{
+  border: 1px red solid;
+  width: 100%;
+  max-width: 50rem;
+  color: #fff;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.photo{
+  border: 1px red solid;
+  width: 100%;
+  max-width: 9rem;
+  height: 9rem;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+}
+.infoBox{
+  border: 1px red solid;
+  width: 100%;
+  max-width: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+.infoBox h2{
+  text-transform: capitalize;
+}
+.infoBox p{
+  font-size: 1.2rem;
+}
+.quotes{
+  border: 1px red solid;
+  width: 100%;
+  max-width: 35rem;
+  text-align: center;
+  line-height: 2rem;
+  font-size: 1.3rem;
+}
+
+@media screen and (max-width: 650px) {
+  .infoBox p{
+  font-size: 1rem;
+}
+.quotes{
+  line-height: 1.5rem;
+  font-size: 1.1rem;
+}
+}
