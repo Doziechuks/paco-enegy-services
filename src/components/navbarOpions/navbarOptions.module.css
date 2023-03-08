@@ -13,6 +13,9 @@
   padding: 0.3rem 0.9rem;
   color: #fff;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   transition: 0.5s;
 }
@@ -36,6 +39,28 @@
 .change {
   color: rgb(255, 180, 40);
 }
+.angleBox{
+  border: 1px red solid;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+  position: relative;
+}
+.angle{
+  border: 1px red solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.5s ease-in-out;
+}
+.show{
+  opacity: 1;
+}
 
 @media screen and (max-width: 1000px) {
   .navLinks {
@@ -51,7 +76,6 @@
     display: none;
   }
   .mobileNavLinks {
-    display: block;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -60,5 +84,8 @@
   }
   .mobileLinks{
     margin-bottom: 4rem;
+  }
+  .mobileContact{
+    transform: translateY(8rem);
   }
 }

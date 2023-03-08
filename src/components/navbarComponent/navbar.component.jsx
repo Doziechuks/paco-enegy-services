@@ -7,13 +7,14 @@ import { FaBars } from "react-icons/fa";
 
 import NavbarOptions from "../navbarOpions/navOptions.component";
 import MobileNavbar from "../mobileNavbar/mobileNavbar.component";
+import Subsidiaries from "../subsidiaries/subsidiaries.component";
 
 import { selectToggleNavbar } from "../../redux/navToggle/navToggleSelector";
 import { handleToggleNavbar } from "../../redux/navToggle/navToggleAction";
 import { createStructuredSelector } from "reselect";
 import { connect } from "react-redux";
 
-const Navbar = ({ showNavbar, setShowNavbar }) => {
+const Navbar = ({ setShowNavbar }) => {
   const [scrollNav, setScrollNav] = useState(false);
   const history = useHistory();
 
@@ -37,6 +38,7 @@ const Navbar = ({ showNavbar, setShowNavbar }) => {
         </div>
       </div>
       <MobileNavbar />
+      <Subsidiaries />
     </nav>
   );
 };

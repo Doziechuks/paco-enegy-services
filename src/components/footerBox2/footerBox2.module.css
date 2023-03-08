@@ -24,12 +24,6 @@
   text-transform: capitalize;
   font-weight: 700;
 }
-.line{
-  border: 0.1px rgb(255, 180, 40) solid;
-  width: 100%;
-  background-color: rgb(255, 180, 40);
-  opacity: 0.5;
-}
 
 @media screen and (max-width: 1200px) {
   .box2{

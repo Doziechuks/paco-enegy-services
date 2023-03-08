@@ -1,7 +1,8 @@
 import { navToggleActionType } from "./navToggleActionType";
 
 const INITIAL_STATE = {
-  toggleNavbar: false
+  toggleNavbar: false,
+  toggleSubsidiary: false
 }
 
 const toggleNavbarReducer = (state = INITIAL_STATE, action) => {
@@ -11,7 +12,12 @@ const toggleNavbarReducer = (state = INITIAL_STATE, action) => {
         ...state, 
         toggleNavbar: !state.toggleNavbar
       };
-      default:
+    case navToggleActionType.SUBSIDIARY_TOGGLE:
+      return {
+        ...state,
+        toggleSubsidiary: !state.toggleSubsidiary
+      };
+    default:
         return state;
   }
 }

@@ -4,11 +4,15 @@ import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 
 import { useState, useEffect } from 'react';
+import { FaAngleUp, FaAngleDown } from "react-icons/fa";
+import Subsidiaries from "../subsidiaries/subsidiaries.component";
 
 import { connect } from 'react-redux';
-import { handleToggleNavbar } from '../../redux/navToggle/navToggleAction';
+import { createStructuredSelector } from 'reselect';
+import { handleToggleNavbar, handleToggleSubsidiary } from '../../redux/navToggle/navToggleAction';
+import { selectToggleSubsidiary } from '../../redux/navToggle/navToggleSelector';
 
-const NavbarOptions = ({ mobileNav, setShowNavbar }) => {
+const NavbarOptions = ({ mobileNav, showSubsidiary, setShowNavbar, setShowSubsidiary }) => {
   const [scrollNav, setScrollNav] = useState(false);
   const [path, setPathName] = useState('');
   const {pathname} = useLocation();
@@ -50,29 +54,43 @@ const NavbarOptions = ({ mobileNav, setShowNavbar }) => {
       >
         about <span></span>
       </Link>
-      <Link
-        to="/services"
+      <div
         className={`${classes.links} ${scrollNav ? classes.change : ""} ${
           mobileNav ? classes.mobileLinks : ""
         } ${path.includes("/services") ? classes.active : ""}`}
-        onClick={() => setShowNavbar()}
+        onClick={() => setShowSubsidiary()}
       >
         services <span></span>
-      </Link>
+        <div className={`${classes.angleBox}`}>
+          <FaAngleDown
+            className={`${classes.angle} ${!showSubsidiary && classes.show}`}
+          />
+          <FaAngleUp
+            className={`${classes.angle} ${showSubsidiary && classes.show}`}
+          />
+        </div>
+      </div>
       <Link
         to="/contactus"
-        className={`${classes.links} ${scrollNav ? classes.change : ""} ${
+        className={`${classes.links} ${showSubsidiary && classes.mobileContact} ${scrollNav ? classes.change : ""} ${
           mobileNav ? classes.mobileLinks : ""
         } ${path.includes("/contactus") ? classes.active : ""}`}
         onClick={() => setShowNavbar()}
       >
         contact <span></span>
       </Link>
+      <Subsidiaries isMobile />
     </div>
   );
 }
  
+const mapStateToProps = createStructuredSelector({
+  showSubsidiary: selectToggleSubsidiary
+});
+
 const mapDispatchToProps = (dispatch) => ({
   setShowNavbar: () => dispatch(handleToggleNavbar()),
+  setShowSubsidiary: () => dispatch(handleToggleSubsidiary())
 });
-export default connect(null, mapDispatchToProps)(NavbarOptions);
+
+export default connect(mapStateToProps, mapDispatchToProps)(NavbarOptions);
