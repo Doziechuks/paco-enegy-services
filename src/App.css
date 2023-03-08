@@ -1,19 +1,61 @@
-*{
+* {
   padding: 0;
-  margin: 0;box-sizing: border-box;
+  margin: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
-* a{
+* a {
   text-decoration: none;
   color: black;
 }
 
-body{
+body {
   width: 100%;
 }
-.App{
+.App {
   border: 1px red solid;
   width: 100%;
+}
+.whatsappLogBox {
+  border: 1px red solid;
+  display: block;
+  position: fixed;
+  right: 2rem;
+  bottom: 3rem;
+  z-index: 20;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.whatsappLogo {
+  color: rgb(12, 187, 12);
+  font-size: 2rem;
+}
+.scroll{
+  bottom: 6rem;
+}
+.arrowUpBox{
+  border: 1px red solid;
+  width: 100%;
+  max-width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  position: fixed;
+  right: 1.5rem;
+  bottom: -3rem;
+  z-index: 20;
+  background-color: rgb(65, 62, 62);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 1s ease-in-out;
+}
+.arrowUp{
+  font-size: 2rem;
+  color: rgb(255, 180, 40);
+}
+.arrowScroll{
+  bottom: 1rem;
 }
