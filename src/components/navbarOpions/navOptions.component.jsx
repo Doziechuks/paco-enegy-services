@@ -12,7 +12,7 @@ import { createStructuredSelector } from 'reselect';
 import { handleToggleNavbar, handleToggleSubsidiary } from '../../redux/navToggle/navToggleAction';
 import { selectToggleSubsidiary } from '../../redux/navToggle/navToggleSelector';
 
-const NavbarOptions = ({ mobileNav, showSubsidiary, setShowNavbar, setShowSubsidiary }) => {
+const NavbarOptions = ({ mobileNav, showSubsidiary, setShowNavbar, setShowSubsidiary, setShow }) => {
   const [scrollNav, setScrollNav] = useState(false);
   const [path, setPathName] = useState('');
   const {pathname} = useLocation();
@@ -90,7 +90,7 @@ const mapStateToProps = createStructuredSelector({
 
 const mapDispatchToProps = (dispatch) => ({
   setShowNavbar: () => dispatch(handleToggleNavbar()),
-  setShowSubsidiary: () => dispatch(handleToggleSubsidiary())
+  setShowSubsidiary: () => dispatch(handleToggleSubsidiary()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(NavbarOptions);

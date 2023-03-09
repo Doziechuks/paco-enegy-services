@@ -14,8 +14,16 @@
 }
 
 .show {
-  transform: translateY(-5%);
+  transform: translateY(-4%);
   opacity: 1;
+}
+.open{
+  transition: all 0.5s ease-in-out;
+  display: none;
+}
+.openSub{
+  transition: all 0.5s ease-in-out;
+  display: block;
 }
 .link {
   width: 100%;
