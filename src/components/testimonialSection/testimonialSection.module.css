@@ -4,10 +4,17 @@
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+  position: relative;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+}
+.backgroundPhoto{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
 }
 .gradientBox {
   width: 100%;

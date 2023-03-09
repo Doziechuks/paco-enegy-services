@@ -30,8 +30,13 @@ const TestimonialSection = () => {
   return (
     <section
       className={classes.wrapper}
-      style={{ backgroundImage: `url('./images/testim.jpg')` }}
+      // style={{ backgroundImage: `url('./images/testim.jpg')` }}
     >
+      <img
+        src="./images/testim.jpg"
+        alt="background"
+        className={classes.backgroundPhoto}
+      />
       <div className={classes.gradientBox}>
         <Title heading="some" title="testimonials" isTestimonial />
 
