@@ -2,6 +2,7 @@ import './App.css';
 import Navbar from './components/navbarComponent/navbar.component';
 import Footer from './components/footerComponent/footer.component';
 import HomePage from './pages/homePage/hompage';
+import AboutPage from './pages/aboutPage/aboutPage';
 
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaAngleUp } from "react-icons/fa";
@@ -51,6 +52,7 @@ function App() {
       <Navbar />
       <Switch>
         <Route exact path="/" component={HomePage} />
+        <Route exact path="/about" component={AboutPage} />
       </Switch>
       <Footer />
     </div>

@@ -1,0 +1,25 @@
+.container{
+  border: 1px red solid;
+  width: 100%;
+  height: 25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.container h1{
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 3rem;
+}
+@media screen and (max-width: 650px) {
+  .container{
+    height: 20rem;
+  }
+  .container h1{
+    font-size: 2.5rem;
+  }
+}
