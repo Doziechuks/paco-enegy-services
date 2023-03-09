@@ -12,7 +12,7 @@ const FooterBox1 = () => {
   return (
     <div className={classes.box1}>
       <img
-        src=""
+        src="./images/pacoLogo1.png"
         className={classes.logo}
         alt="logo"
         onClick={() => history.push("/")}

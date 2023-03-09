@@ -1,27 +1,24 @@
 .box1{
-  border: 1px red solid;
   width: 100%;
   max-width: 20rem;
   flex: 0 0 auto;
 }
 .logo {
   display: block;
-  border: 1px red solid;
   width: 100%;
-  max-width: 10rem;
-  height: 4.5rem;
+  max-width: 5rem;
+  height: 5rem;
+  object-fit: cover;
   margin-bottom: 1.5rem;
   cursor: pointer;
 }
 .box1 p{
-  border: 1px red solid;
   width: 100%;
   line-height: 1.5rem;
   text-align: justify;
   margin-bottom: 1.5rem;
 }
 .socialmediaBox{
-  border: 1px red solid;
   width: 100%;
 }
 .socialmediaBox a .mediaIcons{
@@ -32,7 +29,8 @@
 
 @media screen and (max-width: 1000px) {
 .logo {
-  max-width: 8rem;
+  max-width: 5rem;
+  height: 7rem;
 }
 }
 @media screen and (max-width: 650px) {

@@ -1,5 +1,4 @@
 .wrapper{
-  border: 1px red solid;
   width: 100%;
   max-width: 40rem;
   transform: translateX(-110%);
@@ -14,15 +13,14 @@
   margin-bottom: 3rem;
 }
 .title span{
-  color: rgb(255, 180, 40);
+  color: #ff7b00;
 }
 .addressBox{
-  border: 1px red solid;
   margin-bottom: 1.5rem;
   user-select: none;
 }
 .addressBox h2{
-  color: rgb(255, 180, 40);
+  color: #ff7b00;
   text-transform: uppercase;
   font-weight: bolder;
   margin-bottom: 0.2rem;

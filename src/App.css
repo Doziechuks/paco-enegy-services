@@ -15,11 +15,9 @@ body {
   width: 100%;
 }
 .App {
-  border: 1px red solid;
   width: 100%;
 }
 .whatsappLogBox {
-  border: 1px red solid;
   display: block;
   position: fixed;
   right: 2rem;
@@ -36,7 +34,6 @@ body {
   bottom: 6rem;
 }
 .arrowUpBox{
-  border: 1px red solid;
   width: 100%;
   max-width: 3rem;
   height: 3rem;
@@ -45,7 +42,7 @@ body {
   right: 1.5rem;
   bottom: -3rem;
   z-index: 20;
-  background-color: rgb(65, 62, 62);
+  background-color: lightgrey;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -54,7 +51,7 @@ body {
 }
 .arrowUp{
   font-size: 2rem;
-  color: rgb(255, 180, 40);
+  color: #ff7b00;
 }
 .arrowScroll{
   bottom: 1rem;

@@ -1,8 +1,7 @@
 .container {
-  border: 1px red solid;
   width: 100%;
   max-width: 18rem;
-  border-top: 1px rgb(255, 180, 40) solid;
+  border-top: 1px #ff7b00 solid;
   background-color: #fff;
   padding: 0.5rem;
   position: fixed;
@@ -25,7 +24,8 @@
   transition: 0.5s ease-in-out;
 }
 .link:hover{
-  background-color: lightgrey;
+  background-color: #ff7b00;
+  padding-left: 1rem;
 }
 hr{
   margin: 0.5rem 0;

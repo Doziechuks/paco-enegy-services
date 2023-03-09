@@ -9,7 +9,6 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: red;
 }
 .wrapper h1 {
   width: 100%;
@@ -28,7 +27,7 @@
   line-height: 2rem;
   color: #fff;
   text-align: center;
-  color: rgb(255, 180, 40);
+  color: #ff7b00;
   user-select: none;
   margin-bottom: 2rem;
 }

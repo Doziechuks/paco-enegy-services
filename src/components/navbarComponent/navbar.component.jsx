@@ -31,10 +31,17 @@ const Navbar = ({ setShowNavbar }) => {
       <div
         className={`${classes.container} ${scrollNav ? classes.scroll : ""}`}
       >
-        <img src="" className={classes.logo} alt='logo' onClick={() => history.push('/')} />
+        <img
+          src="./images/pacoLogo1.png"
+          className={classes.logo}
+          alt="logo"
+          onClick={() => history.push("/")}
+        />
         <NavbarOptions />
-        <div className={classes.handBurggerBox} onClick= {() => setShowNavbar()}>
-          <FaBars className={`${classes.icon} ${scrollNav ? classes.change : ''}`} />
+        <div className={classes.handBurggerBox} onClick={() => setShowNavbar()}>
+          <FaBars
+            className={`${classes.icon} ${scrollNav ? classes.change : ""}`}
+          />
         </div>
       </div>
       <MobileNavbar />

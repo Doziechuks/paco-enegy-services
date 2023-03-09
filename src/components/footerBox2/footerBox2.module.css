@@ -1,5 +1,4 @@
 .box2{
-  border: 1px red solid;
   width: 100%;
   max-width: 20rem;
   margin: 0 6rem;
@@ -8,11 +7,10 @@
 
 .box2 h2{
   text-transform: capitalize;
-  color: rgb(255, 180, 40);
+  color: #ff7b00;
   margin-bottom: 1.5rem;
 }
 .box2 ul{
-  border: 1px red solid;
   width: 100%;
   list-style: none;
   margin: 0;
@@ -22,7 +20,14 @@
   line-height: 2rem;
   cursor: pointer;
   text-transform: capitalize;
-  font-weight: 700;
+  transition: all 0.5s ease-in-out;
+}
+.box2 ul li:hover{
+  background-color: #ff7b00;
+  padding: 0 0.7rem;
+}
+hr{
+  margin: 0.5rem 0;
 }
 
 @media screen and (max-width: 1200px) {

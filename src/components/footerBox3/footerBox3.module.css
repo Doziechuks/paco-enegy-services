@@ -1,5 +1,4 @@
 .box3 {
-  border: 1px red solid;
   width: 100%;
   max-width: 20rem;
   flex: 0 0 auto;
@@ -7,11 +6,10 @@
 
 .box3 h2 {
   text-transform: capitalize;
-  color: rgb(255, 180, 40);
+  color: #ff7b00;
   margin-bottom: 1.5rem;
 }
 .address {
-  border: 1px red solid;
   width: 100%;
 }
 .phoneBox {
@@ -26,16 +24,13 @@
   color: #fff;
 }
 .phoneBox span {
-  font-weight: 700;
   font-size: 1.1rem;
 }
 .office {
-  border: 1px red solid;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
 .office span{
-  font-weight: 700;
   line-height: 1.5rem;
 }

@@ -1,5 +1,4 @@
 .container{
-  border: 1px red solid;
   width: 100%;
   max-width: 50rem;
   color: #fff;
@@ -10,7 +9,6 @@
   justify-content: center;
 }
 .photo{
-  border: 1px red solid;
   width: 100%;
   max-width: 9rem;
   height: 9rem;
@@ -19,7 +17,6 @@
   margin-bottom: 1.5rem;
 }
 .infoBox{
-  border: 1px red solid;
   width: 100%;
   max-width: 15rem;
   display: flex;
@@ -30,12 +27,12 @@
 }
 .infoBox h2{
   text-transform: capitalize;
+  color: #ffcd00;
 }
 .infoBox p{
   font-size: 1.2rem;
 }
 .quotes{
-  border: 1px red solid;
   width: 100%;
   max-width: 35rem;
   text-align: center;

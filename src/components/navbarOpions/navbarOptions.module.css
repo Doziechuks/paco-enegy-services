@@ -1,5 +1,4 @@
 .navLinks {
-  border: 1px red solid;
   width: 100%;
   max-width: 30rem;
   display: flex;
@@ -7,7 +6,6 @@
   justify-content: space-between;
 }
 .links {
-  border: 1px red solid;
   text-transform: capitalize;
   font-size: 1.3rem;
   padding: 0.3rem 0.9rem;
@@ -25,7 +23,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: red;
+  background-color: #ff7b00;
   border-radius: 1.9rem;
   z-index: -1;
   transform: scale(0);
@@ -37,10 +35,9 @@
   opacity: 1;
 }
 .change {
-  color: rgb(255, 180, 40);
+  color: #333;
 }
 .angleBox{
-  border: 1px red solid;
   width: 100%;
   display: flex;
   align-items: center;
@@ -49,7 +46,6 @@
   position: relative;
 }
 .angle{
-  border: 1px red solid;
   display: flex;
   align-items: center;
   justify-content: center;

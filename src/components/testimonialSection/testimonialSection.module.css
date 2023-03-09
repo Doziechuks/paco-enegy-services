@@ -1,5 +1,4 @@
 .wrapper {
-  border: 1px red solid;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -11,7 +10,6 @@
   background-attachment: fixed;
 }
 .gradientBox {
-  border: 1px blue solid;
   width: 100%;
   height: 100%;
   padding: 4rem 3rem;
@@ -19,7 +17,6 @@
 }
 
 .container {
-  border: 1px red solid;
   width: 100%;
   height: 22rem;
   display: flex;
