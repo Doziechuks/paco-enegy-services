@@ -39,9 +39,7 @@ const Title = ({ heading, title, isService, isAbout, isAboutPage, isContact, isT
           isAbout && showAboutTitle ? classes.showTitle : ""
         }  ${isService && showServicestTitle ? classes.showTitle : ""} ${
           isContact && showContactTitle ? classes.showTitle : ""
-        } ${isTestimonial && showTestimonialTitle ? classes.showTitle : ""} ${
-          isTestimonial ? classes.colour : ""
-        }`}
+        } ${isTestimonial && showTestimonialTitle ? classes.showTitle : ""}`}
       >
         {" "}
         <span>{heading}</span> {title}

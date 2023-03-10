@@ -1,5 +1,4 @@
 .container {
-  border: 1px red solid;
   width: 100%;
   max-width: 27rem;
   display: flex;
@@ -23,7 +22,6 @@
   user-select: none;
 }
 .values {
-  border: 1px red solid;
   width: 100%;
   font-size: 1.2rem;
   color: grey;

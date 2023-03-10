@@ -29,12 +29,6 @@ const TestimonialSection = () => {
 
   return (
     <section className={classes.wrapper}>
-      <img
-        src="./images/testim.jpg"
-        alt="background"
-        className={classes.backgroundPhoto}
-      />
-      <div className={classes.gradientBox}>
         <Title heading="some" title="testimonials" isTestimonial />
         <div className={classes.container}>
           {testimonialData.map((items, itemsIndex) => {
@@ -73,7 +67,6 @@ const TestimonialSection = () => {
             </div>
           </div>
         </div>
-      </div>
     </section>
   );
 }
