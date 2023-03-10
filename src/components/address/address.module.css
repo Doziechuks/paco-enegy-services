@@ -1,8 +1,11 @@
-.wrapper{
+.wrapper, .wrapper2{
   width: 100%;
   max-width: 40rem;
   transform: translateX(-110%);
   transition: all 2s ease-in-out;
+}
+.wrapper2{
+  transform: translateX(0);
 }
 .showSlide{
   transform: translateX(0);

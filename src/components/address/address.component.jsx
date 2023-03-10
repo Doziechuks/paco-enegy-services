@@ -3,7 +3,7 @@ import classes from './address.module.css';
 import { useState } from 'react';
 
 
-const Address = () => {
+const Address = ({ isContactPage }) => {
   const [showSectionSlide, setShowSectionSlide] = useState(false);
 
     const showSection = () => {
@@ -17,7 +17,11 @@ const Address = () => {
     window.addEventListener("scroll", showSection);
 
   return (
-    <div className={`${classes.wrapper} ${showSectionSlide ? classes.showSlide : ''}`}>
+    <div
+      className={`${isContactPage ? classes.wrapper2 : classes.wrapper} ${
+        showSectionSlide ? classes.showSlide : ""
+      }`}
+    >
       <h1 className={classes.title}>
         <span> how can we</span> help you?
       </h1>
@@ -30,8 +34,8 @@ const Address = () => {
       <div className={classes.addressBox}>
         <h2>offic hour:</h2>
         <p>
-          monday - friday: 8AM - 5PM <br /> saturday: 10AM - 3PM <br />{" "}
-          sunday: PACO rests
+          monday - friday: 8AM - 5PM <br /> saturday: 10AM - 3PM <br /> sunday:
+          PACO rests
         </p>
       </div>
       <div className={classes.addressBox}>

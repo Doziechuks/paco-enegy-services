@@ -29,44 +29,45 @@ const TestimonialSection = () => {
 
   return (
     <section className={classes.wrapper}>
-        <Title heading="some" title="testimonials" isTestimonial />
-        <div className={classes.container}>
-          {testimonialData.map((items, itemsIndex) => {
-            let slidePosition = `${classes.nextSlide}`;
+      <Title heading="some" title="testimonials" isTestimonial />
+      {/* <Title heading="some" title="testimonials" isAboutPage /> */}
+      <div className={classes.container}>
+        {testimonialData.map((items, itemsIndex) => {
+          let slidePosition = `${classes.nextSlide}`;
 
-            if (itemsIndex === index) {
-              slidePosition = `${classes.activeSlide}`;
-            }
-            if (
-              itemsIndex === index - 1 ||
-              (index === 0 && itemsIndex === testimonialData.length - 1)
-            ) {
-              slidePosition = `${classes.lastSlide}`;
-            }
-            return (
-              <div
-                className={`${classes.contentWrapper} ${slidePosition}`}
-                key={items.id}
-              >
-                <TestimonialItem items={items} />
-              </div>
-            );
-          })}
-          <div className={classes.arrows}>
+          if (itemsIndex === index) {
+            slidePosition = `${classes.activeSlide}`;
+          }
+          if (
+            itemsIndex === index - 1 ||
+            (index === 0 && itemsIndex === testimonialData.length - 1)
+          ) {
+            slidePosition = `${classes.lastSlide}`;
+          }
+          return (
             <div
-              className={classes.arrowLeft}
-              onClick={() => setIndex(index - 1)}
+              className={`${classes.contentWrapper} ${slidePosition}`}
+              key={items.id}
             >
-              <FaAngleLeft className={classes.arrowFont} />
+              <TestimonialItem items={items} />
             </div>
-            <div
-              className={classes.arrowRight}
-              onClick={() => setIndex(index + 1)}
-            >
-              <FaAngleRight className={classes.arrowFont} />
-            </div>
+          );
+        })}
+        <div className={classes.arrows}>
+          <div
+            className={classes.arrowLeft}
+            onClick={() => setIndex(index - 1)}
+          >
+            <FaAngleLeft className={classes.arrowFont} />
+          </div>
+          <div
+            className={classes.arrowRight}
+            onClick={() => setIndex(index + 1)}
+          >
+            <FaAngleRight className={classes.arrowFont} />
           </div>
         </div>
+      </div>
     </section>
   );
 }

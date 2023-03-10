@@ -5,7 +5,7 @@ import CustomButton from "../customButton/customButton";
 import emailjs from "@emailjs/browser";
 import { useState, useRef } from "react";
 
-const ContactForm = () => {
+const ContactForm = ({ isContactPage }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [title, setTitle] = useState("");
@@ -57,7 +57,7 @@ const ContactForm = () => {
     <form
       ref={form}
       onSubmit={handleSendEmail}
-      className={`${classes.container} ${
+      className={`${isContactPage ? classes.container2 : classes.container} ${
         showSectionSlide ? classes.showSlide : ""
       }`}
     >

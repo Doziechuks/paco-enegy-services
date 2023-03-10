@@ -1,4 +1,4 @@
-.container {
+.container, .container2 {
   width: 100%;
   max-width: 40rem;
   display: flex;
@@ -7,6 +7,9 @@
   padding: 1.5rem;
   transform: translateX(110%);
   transition: all 2s ease-in-out;
+}
+.container2{
+  transform: translateX(0);
 }
 .showSlide{
   transform: translateX(0);
