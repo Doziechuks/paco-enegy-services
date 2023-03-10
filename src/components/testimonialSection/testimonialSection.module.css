@@ -30,6 +30,7 @@
   align-items: center;
   position: relative;
   overflow: hidden;
+  border: 1px red solid;
 }
 .contentWrapper {
   width: 100%;

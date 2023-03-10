@@ -28,10 +28,7 @@ const TestimonialSection = () => {
     }, [index]);
 
   return (
-    <section
-      className={classes.wrapper}
-      // style={{ backgroundImage: `url('./images/testim.jpg')` }}
-    >
+    <section className={classes.wrapper}>
       <img
         src="./images/testim.jpg"
         alt="background"
@@ -39,7 +36,6 @@ const TestimonialSection = () => {
       />
       <div className={classes.gradientBox}>
         <Title heading="some" title="testimonials" isTestimonial />
-
         <div className={classes.container}>
           {testimonialData.map((items, itemsIndex) => {
             let slidePosition = `${classes.nextSlide}`;

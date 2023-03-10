@@ -2,7 +2,7 @@ import classes from "./title.module.css";
 
 import { useState } from "react";
 
-const Title = ({ heading, title, isService, isAbout, isContact, isTestimonial }) => {
+const Title = ({ heading, title, isService, isAbout, isAboutPage, isContact, isTestimonial }) => {
   const [showAboutTitle, setShowAboutTitle] = useState(false);
   const [showServicestTitle, setShowServicesTitle] = useState(false);
   const [showTestimonialTitle, setShowTestimonialTitle] = useState(false);
@@ -24,7 +24,7 @@ const Title = ({ heading, title, isService, isAbout, isContact, isTestimonial })
      } else {
        setShowTestimonialTitle(false);
      }
-    if (window.scrollY >= 1500) {
+    if (window.scrollY >= 1900) {
       setShowContactTitle(true);
     } else {
       setShowContactTitle(false);
@@ -35,9 +35,9 @@ const Title = ({ heading, title, isService, isAbout, isContact, isTestimonial })
   return (
     <div className={classes.titleBox}>
       <h1
-        className={`${classes.title} ${
+        className={`${isAboutPage ? classes.title2 : classes.title} ${
           isAbout && showAboutTitle ? classes.showTitle : ""
-        } ${isService && showServicestTitle ? classes.showTitle : ""} ${
+        }  ${isService && showServicestTitle ? classes.showTitle : ""} ${
           isContact && showContactTitle ? classes.showTitle : ""
         } ${isTestimonial && showTestimonialTitle ? classes.showTitle : ""} ${
           isTestimonial ? classes.colour : ""
