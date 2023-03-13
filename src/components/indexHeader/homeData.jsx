@@ -1,7 +1,7 @@
 const data = [
   {
     title: "solar installation and maintenance",
-    imageUrl: "./images/solar.jpg",
+    imageUrl: "./images/solarEnergy.jpg",
     id: 1,
     info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos debitis doloremque aut sint iure tempore. Lorem ipsum dolor sit amet.",
   },
