@@ -8,7 +8,7 @@ const ContactPage = () => {
   return (
     <section className={classes.wrapper}>
       <PageHeading
-        background="./images/partnership.avif"
+        background="./images/myPhone.avif"
         title="contact us"
       />
       <div className={classes.container}>

@@ -57,7 +57,7 @@ const AboutSection = ({ isAboutPage }) => {
             showSectionSlide ? classes.showBackground : ""
           } ${isAboutPage && classes.showBackground}`}
           style={{
-            backgroundImage: "url('./images/solar.jpg')",
+            backgroundImage: "url('./images/landingPagepng.png')",
           }}
         />
         <div

@@ -4,6 +4,11 @@
   height: 20rem;
   object-fit: cover;
   flex: 0 0 auto;
+  transition: all 0.5s ease-in-out;
+}
+.photo:hover{
+  transform: scale(1.04);
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1100px) {

@@ -9,7 +9,7 @@ import MissionVision from '../../components/missionVision/missionVision.componen
 const AboutPage = () => {
   return (
     <section className={classes.wrapper}>
-      <PageHeading background="./images/solar.jpg" title='about us' />
+      <PageHeading background="./images/myOffice.jpg" title='about us' />
       <AboutSection isAboutPage />
       <MissionVision />
       <TestimonialSection />
