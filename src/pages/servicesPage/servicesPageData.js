@@ -1,9 +1,24 @@
+import electrical from '../../assets/electricalWiring.jpg';
+import solar from '../../assets/solarField.avif';
+import cctv from "../../assets/cctvFix.jpg";
+import partnership from "../../assets/partnership.avif";
+import cctvAd from "../../assets/cctvad.png";
+import floodLight from "../../assets/floodLight.png";
+import solar1 from "../../assets/solar.png";
+import solar2 from "../../assets/solar1.png";
+import solarBattery from "../../assets/solarBattery.png";
+import charger from "../../assets/solarcharger.png";
+import solarr from '../../assets/solarr.png';
+import solarTraining from "../../assets/solarTraining.png";
+import training from "../../assets/training.png";
+import cctvTraining from "../../assets/solartrainingAd.png";
+
 export const servicesPageData = {
   solarinstallations: {
     id: 1,
     title: "solar installation and maintenance",
     routeName: "solarinstallations",
-    backgroundImage: "https://i.ibb.co/ZYW3VTp/brown-brim.png",
+    backgroundImage:`${solar}`,
     info: ` Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo,
             molestiae sunt. Sapiente at maxime voluptate, itaque optio aperiam.
             Consequuntur, repudiandae dolorem distinctio ex eveniet debitis
@@ -19,19 +34,12 @@ export const servicesPageData = {
       "solar maintenance",
       "solar installaion trainings",
     ],
-    photoGallery: [
-      "https://i.ibb.co/ZYW3VTp/brown-brim.png",
-      "https://i.ibb.co/ZYW3VTp/brown-brim.png",
-      "https://i.ibb.co/ypkgK0X/blue-beanie.png",
-      "https://i.ibb.co/QdJwgmp/brown-cowboy.png",
-      "https://i.ibb.co/RjBLWxB/grey-brim.png",
-      "https://i.ibb.co/YTjW3vF/green-beanie.png",
-    ],
+    photoGallery: [solarr,floodLight, charger, solar1, training, solar2, solarTraining, solarBattery],
   },
   CCTVinstallations: {
     id: 2,
     title: "CCTV camera  installation",
-    backgroundImage: "https://i.ibb.co/QdJwgmp/brown-cowboy.png",
+    backgroundImage:`${cctv}`,
     routeName: "CCTVinstallations",
     info: ` Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo,
             molestiae sunt. Sapiente at maxime voluptate, itaque optio aperiam.
@@ -49,18 +57,15 @@ export const servicesPageData = {
       "CCTV camera installaion trainings",
     ],
     photoGallery: [
-      "https://i.ibb.co/ZYW3VTp/brown-brim.png",
-      "https://i.ibb.co/ZYW3VTp/brown-brim.png",
-      "https://i.ibb.co/ypkgK0X/blue-beanie.png",
+      "https://i.ibb.co/ZYW3VTp/brown-brim.png",cctvAd, cctvTraining,
       "https://i.ibb.co/QdJwgmp/brown-cowboy.png",
       "https://i.ibb.co/RjBLWxB/grey-brim.png",
-      "https://i.ibb.co/YTjW3vF/green-beanie.png",
     ],
   },
   generalhousewiring: {
     id: 3,
     title: "general house wiring",
-    backgroundImage: "https://i.ibb.co/YTjW3vF/green-beanie.png",
+    backgroundImage:`${electrical}`,
     routeName: "generalhousewiring",
     info: ` Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo,
             molestiae sunt. Sapiente at maxime voluptate, itaque optio aperiam.
@@ -86,7 +91,7 @@ export const servicesPageData = {
   partnership: {
     id: 4,
     title: "partnership",
-    backgroundImage: "https://i.ibb.co/QdJwgmp/brown-cowboy.png",
+    backgroundImage:`${partnership}`,
     routeName: "partnership",
     info: ` Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo,
             molestiae sunt. Sapiente at maxime voluptate, itaque optio aperiam.

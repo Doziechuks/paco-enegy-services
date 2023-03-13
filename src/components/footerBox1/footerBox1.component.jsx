@@ -2,6 +2,8 @@ import classes from './footerBox1.module.css';
 
 import { useHistory } from "react-router-dom";
 
+import logo from "../../assets/pacoLogo1.png";
+
 import { BsFacebook } from "react-icons/bs";
 import { AiFillInstagram } from "react-icons/ai";
 import { IoLogoWhatsapp } from "react-icons/io";
@@ -12,7 +14,7 @@ const FooterBox1 = () => {
   return (
     <div className={classes.box1}>
       <img
-        src="./images/pacoLogo1.png"
+        src={logo}
         className={classes.logo}
         alt="logo"
         onClick={() => history.push("/")}

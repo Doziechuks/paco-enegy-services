@@ -5,6 +5,8 @@ import { useHistory } from "react-router-dom";
 
 import { FaBars } from "react-icons/fa";
 
+import logo from "../../assets/pacoLogo1.png";
+
 import NavbarOptions from "../navbarOpions/navOptions.component";
 import MobileNavbar from "../mobileNavbar/mobileNavbar.component";
 import Subsidiaries from "../subsidiaries/subsidiaries.component";
@@ -39,13 +41,19 @@ const Navbar = ({ setShowNavbar }) => {
         className={`${classes.container} ${scrollNav ? classes.scroll : ""}`}
       >
         <img
-          src="./images/pacoLogo1.png"
+          src={logo}
           className={classes.logo}
           alt="logo"
           onClick={() => history.push("/")}
         />
         <NavbarOptions />
-        <div className={classes.handBurggerBox} onClick={() => {setShowNavbar(); handleScrollTop();}}>
+        <div
+          className={classes.handBurggerBox}
+          onClick={() => {
+            setShowNavbar();
+            handleScrollTop();
+          }}
+        >
           <FaBars
             className={`${classes.icon} ${scrollNav ? classes.change : ""}`}
           />
