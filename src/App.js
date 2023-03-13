@@ -4,6 +4,7 @@ import Footer from './components/footerComponent/footer.component';
 import HomePage from './pages/homePage/hompage';
 import AboutPage from './pages/aboutPage/aboutPage';
 import ContactPage from './pages/contactPage/contactPage';
+import ServicesPage from './pages/servicesPage/servicesPage';
 
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaAngleUp } from "react-icons/fa";
@@ -55,6 +56,7 @@ function App() {
         <Route exact path="/" component={HomePage} />
         <Route exact path="/about" component={AboutPage} />
         <Route exact path="/contactus" component={ContactPage} />
+        <Route exact path="/services/:servicesId" component={ServicesPage} />
       </Switch>
       <Footer />
     </div>

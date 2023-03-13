@@ -17,7 +17,7 @@ const ServicesItem = ({ item }) => {
         <span>{title}</span>
       </div>
       <div className={classes.buttonBox}>
-        <CustomButton isVisit>Visit Page</CustomButton>
+        <CustomButton onClick={() =>history.push(`services/${linkUrl}`)} isVisit>Visit Page</CustomButton>
         <a href={`${whatsappUrl}`} target='blank' className={classes.whatsappLink}>
           <CustomButton isGetToUs>Get to us</CustomButton>
         </a>

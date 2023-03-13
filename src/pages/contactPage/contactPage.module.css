@@ -1,11 +1,22 @@
 .wrapper{
-  border: 1px red solid;
   width: 100%;
 }
 
 .container{
-  border: 1px red solid;
   width: 100%;
   padding: 4rem 3rem;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1000px) {
+  .container{
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 650px) {
+  .container{
+    padding: 4rem 1.5rem;
+  }
 }

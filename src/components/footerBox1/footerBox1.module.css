@@ -30,11 +30,12 @@
 @media screen and (max-width: 1000px) {
 .logo {
   max-width: 5rem;
-  height: 7rem;
+  height: 5rem;
 }
 }
 @media screen and (max-width: 650px) {
 .logo {
-  max-width: 7rem;
+  max-width: 4rem;
+  height: 4rem;
 }
 }

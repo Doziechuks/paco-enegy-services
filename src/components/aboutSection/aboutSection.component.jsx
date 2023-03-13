@@ -60,7 +60,7 @@ const AboutSection = ({ isAboutPage }) => {
             backgroundImage: "url('./images/solar.jpg')",
           }}
         />
-        <p
+        <div
           className={`${classes.content} ${
             showSectionSlide ? classes.showBackground : ""
           } ${isAboutPage && classes.showBackground}`}
@@ -104,7 +104,7 @@ const AboutSection = ({ isAboutPage }) => {
               more info
             </CustomButton>
           </div>
-        </p>
+        </div>
       </div>
     </section>
   );

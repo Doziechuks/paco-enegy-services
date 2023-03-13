@@ -1,4 +1,4 @@
-.wrapper{
+.wrapper {
   width: 100%;
   overflow: hidden;
 }
@@ -25,8 +25,8 @@
   cursor: pointer;
 }
 .scroll {
-  background-color: whitesmoke;
-   box-shadow: 0 0.3em 0.5em rgba(0, 0, 0, 0.3);
+  background-color: #f2f0f8;
+  box-shadow: 0 0.3em 0.5em rgba(0, 0, 0, 0.3);
   transition: 0.5s;
 }
 .handBurggerBox {
@@ -34,12 +34,13 @@
 }
 
 @media screen and (max-width: 1000px) {
- .container {
-  padding: 0 1.5rem;
-}
-.logo {
-  max-width: 8rem;
-}
+  .container {
+    padding: 0 1.5rem;
+  }
+  .logo {
+    max-width: 5rem;
+    height: 5rem;
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -64,7 +65,7 @@
     color: #fff;
     transition: all 0.5s ease-in-out;
   }
-  .change{
+  .change {
     color: #ff7b00;
     transition: all 0.5s ease-in-out;
   }

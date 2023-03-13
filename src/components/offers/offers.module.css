@@ -1,0 +1,9 @@
+.container{
+  width: 100%;
+}
+.container li{
+  margin-bottom: 1rem;
+}
+.container li::first-letter{
+  text-transform: uppercase;
+}

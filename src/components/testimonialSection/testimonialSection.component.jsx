@@ -29,8 +29,8 @@ const TestimonialSection = () => {
 
   return (
     <section className={classes.wrapper}>
-      <Title heading="some" title="testimonials" isTestimonial />
-      {/* <Title heading="some" title="testimonials" isAboutPage /> */}
+        <Title heading="some" title="testimonials" isTestimonial />
+        
       <div className={classes.container}>
         {testimonialData.map((items, itemsIndex) => {
           let slidePosition = `${classes.nextSlide}`;
