@@ -18,6 +18,13 @@ const Navbar = ({ setShowNavbar }) => {
   const [scrollNav, setScrollNav] = useState(false);
   const history = useHistory();
 
+   const handleScrollTop = () => {
+     window.scrollTo({
+       top: 0,
+       behavior: "smooth",
+     });
+   };
+
   const changeBackground = () => {
     if (window.scrollY >= 50) {
       setScrollNav(true);
@@ -38,7 +45,7 @@ const Navbar = ({ setShowNavbar }) => {
           onClick={() => history.push("/")}
         />
         <NavbarOptions />
-        <div className={classes.handBurggerBox} onClick={() => setShowNavbar()}>
+        <div className={classes.handBurggerBox} onClick={() => {setShowNavbar(); handleScrollTop();}}>
           <FaBars
             className={`${classes.icon} ${scrollNav ? classes.change : ""}`}
           />
