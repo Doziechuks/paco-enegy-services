@@ -44,6 +44,9 @@
 }
 
 @media screen and (max-width: 650px) {
+  .wrapper{
+    overflow-x: hidden;
+  }
   .container {
     height: 4.5rem;
     padding: 0 1.5rem;

@@ -53,7 +53,7 @@ hr{
     right: 3.5rem;
     top: 22rem;
     transform: translateY(0);
-    transform: translateX(20%);
+    transform: translateX(70%);
   }
   .show {
     transform: translateX(5%);
