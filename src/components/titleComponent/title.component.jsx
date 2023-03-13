@@ -33,7 +33,7 @@ const Title = ({ heading, title, isService, isAbout, isAboutPage, isContact, isT
   window.addEventListener("scroll", showSection);
 
   return (
-    <div className={classes.titleBox} isAboutPage>
+    <div className={classes.titleBox}>
       <h1
         className={`${isAboutPage ? classes.title2 : classes.title} ${
           isAbout && showAboutTitle ? classes.showTitle : ""

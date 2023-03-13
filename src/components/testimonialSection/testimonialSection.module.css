@@ -86,9 +86,6 @@
   .wrapper {
     padding: 4rem 1.5rem;
   }
-  .container {
-    height: 20rem;
-  }
   .contentWrapper {
     transition: all 1s ease-in-out;
   }
