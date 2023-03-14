@@ -3,6 +3,7 @@ import { navToggleActionType } from "./navToggleActionType";
 const INITIAL_STATE = {
   toggleNavbar: false,
   toggleSubsidiary: false,
+  submitForm: true
 }
 
 const toggleNavbarReducer = (state = INITIAL_STATE, action) => {
@@ -17,6 +18,11 @@ const toggleNavbarReducer = (state = INITIAL_STATE, action) => {
         ...state,
         toggleSubsidiary: !state.toggleSubsidiary,
       };
+    case navToggleActionType.SUBMIT_FORM:
+      return{
+        ...state,
+        submitForm: action.payload
+      }
     default:
       return state;
   }

@@ -6,3 +6,7 @@ export const handleToggleNavbar = () => ({
 export const handleToggleSubsidiary = () => ({
   type: navToggleActionType.SUBSIDIARY_TOGGLE
 });
+export const handleSubmitForm = (user) => ({
+  type:navToggleActionType.SUBMIT_FORM,
+  payload: user
+});

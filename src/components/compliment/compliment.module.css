@@ -1,0 +1,15 @@
+.wrapper{
+  border: 1px red solid;
+  width: 100%;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f0f8;
+}
+.wrapper h2{
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #ff7b00;
+}

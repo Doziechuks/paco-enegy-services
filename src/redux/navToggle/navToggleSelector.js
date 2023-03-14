@@ -11,3 +11,8 @@ export const selectToggleSubsidiary = createSelector(
   [selectToggle],
   (toggle) => toggle.toggleSubsidiary
 );
+
+export const selectSubmitForm = createSelector(
+  [selectToggle],
+  (form) => form.submitForm
+);

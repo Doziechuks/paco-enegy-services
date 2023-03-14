@@ -5,7 +5,10 @@ import CustomButton from "../customButton/customButton";
 import emailjs from "@emailjs/browser";
 import { useState, useRef } from "react";
 
-const ContactForm = ({ isContactPage }) => {
+import { connect } from "react-redux";
+import { handleSubmitForm } from "../../redux/navToggle/navToggleAction";
+
+const ContactForm = ({ isContactPage, setSuccess }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [title, setTitle] = useState("");
@@ -38,6 +41,7 @@ const ContactForm = ({ isContactPage }) => {
     setMessage("");
     setName("");
     setTitle("");
+    setSuccess(false);
   };
 
   const handleName = (e) => {
@@ -104,4 +108,8 @@ const ContactForm = ({ isContactPage }) => {
   );
 };
 
-export default ContactForm;
+const mapDispatchToProps = (dispatch) => ({
+  setSuccess: (user) => dispatch(handleSubmitForm(user))
+});
+
+export default connect(null, mapDispatchToProps)(ContactForm);
