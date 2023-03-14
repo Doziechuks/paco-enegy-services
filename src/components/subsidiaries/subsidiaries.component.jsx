@@ -14,7 +14,7 @@ const Subsidiaries = ({showSubsidiary, isMobile, setShowNavbar, setShowSubsidiar
   const history = useHistory();
 
   const handleScroll = () => {
-    if(window.scrollY >= 1500) {
+    if(window.scrollY >= 200) {
       setShow(true);
     }else{
       setShow(false);
