@@ -29,9 +29,8 @@
 }
 .values li{
   margin-bottom: 1.5rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: grey;
-  text-align: center;
 }
 .values li:last-child{
   margin-bottom: 0;

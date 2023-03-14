@@ -13,7 +13,7 @@ const FooterBox2 = () => {
    };
   return (
     <div className={classes.box2}>
-      <h2>quick link</h2>
+      <h2>quick links</h2>
       <ul>
         <li onClick={() => {history.push("/"); handleScrollTop();}}>home</li>
         <hr />

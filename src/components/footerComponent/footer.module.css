@@ -7,7 +7,7 @@
   width: 100%;
   display: flex;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: space-between;
   color: #fff;
   margin-bottom: 3.5rem;
 }
