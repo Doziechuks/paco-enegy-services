@@ -32,7 +32,7 @@ const Address = ({ isContactPage }) => {
         </p>
       </div>
       <div className={classes.addressBox}>
-        <h2>offic hour:</h2>
+        <h2>office hour:</h2>
         <p>
           monday - friday: 8AM - 5PM <br /> saturday: 10AM - 3PM <br /> sunday:
           PACO rests

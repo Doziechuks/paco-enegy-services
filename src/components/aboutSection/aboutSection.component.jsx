@@ -52,13 +52,12 @@ const AboutSection = ({ isAboutPage }) => {
     <section className={classes.wrapper}>
       <Title heading={"about"} title={"our company"} isAbout />
       <div className={classes.contentBox}>
-        <div
-          className={`${classes.background} ${
+        <img
+          src="./images/landingPagepng.png"
+          alt="background"
+          className={`${classes.backgroundImg} ${
             showSectionSlide ? classes.showBackground : ""
           } ${isAboutPage && classes.showBackground}`}
-          style={{
-            backgroundImage: "url('./images/landingPagepng.png')",
-          }}
         />
         <div
           className={`${classes.content} ${
