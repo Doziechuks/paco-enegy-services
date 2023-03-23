@@ -20,7 +20,7 @@ const AboutSection = ({ isAboutPage }) => {
     } else {
       setShowSectionSlide(false);
     }
-    if (window.scrollY >= 700) {
+    if (window.scrollY >= 500) {
       setMobileSlide(true);
     } else {
       setMobileSlide(false);
@@ -30,7 +30,7 @@ const AboutSection = ({ isAboutPage }) => {
     } else {
       setAboutMobileSlide(false);
     }
-    if (window.scrollY >= 1000) {
+    if (window.scrollY >= 900) {
       setMobileSlide2(true);
     } else {
       setMobileSlide2(false);
