@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import { useHistory } from 'react-router-dom';
-import classes from './aboutSection.module.css';
+import { useState } from "react";
+import { useHistory } from "react-router-dom";
+import classes from "./aboutSection.module.css";
 
-import CustomButton from '../customButton/customButton';
-import Title from '../titleComponent/title.component';
+import CustomButton from "../customButton/customButton";
+import Title from "../titleComponent/title.component";
 
 const AboutSection = ({ isAboutPage }) => {
   const [showSectionSlide, setShowSectionSlide] = useState(false);
@@ -69,14 +69,15 @@ const AboutSection = ({ isAboutPage }) => {
               mobileSlide ? classes.mobileShow : ""
             } ${isAboutPage && aboutMobileSlide ? classes.mobileShow : ""}`}
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo,
-            molestiae sunt. Sapiente at maxime voluptate, itaque optio aperiam.
-            Consequuntur, repudiandae dolorem distinctio ex eveniet debitis
-            recusandae, asperiores quae consectetur sint aspernatur minus
-            obcaecati praesentium dolores! Veniam, explicabo vel atque
-            asperiores aspernatur in molestiae, ratione laudantium recusandae
-            iusto excepturi odio, voluptatem commodi placeat adipisci. Deleniti
-            repudiandae pariatur dicta tempora facere voluptatum itaque
+            PACO Energy services is a forward-thinking solar installation
+            company on a mission to revolutionize the way individuals and
+            businesses access clean, renewable energy. Our core belief is that
+            sustainable power should be accessible to everyone, driving us to
+            specialize in designing, installing, and maintaining cutting-edge
+            solar power systems. By seamlessly integrating advanced technology,
+            personalized service, and environmental stewardship, we empower our
+            clients to not only slash energy costs but also significantly reduce
+            their carbon footprint.
           </span>
 
           <span
@@ -84,15 +85,10 @@ const AboutSection = ({ isAboutPage }) => {
               mobileSlide2 ? classes.mobileShow : ""
             } ${isAboutPage && aboutMobileSlide2 ? classes.mobileShow : ""}`}
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo,
-            molestiae sunt. Sapiente at maxime voluptate, itaque optio aperiam.
-            Consequuntur, repudiandae dolorem distinctio ex eveniet debitis
-            recusandae, asperiores quae consectetur sint aspernatur minus
-            obcaecati praesentium dolores! Veniam, explicabo vel atque
-            asperiores aspernatur in molestiae, ratione laudantium recusandae
-            iusto excepturi odio, voluptatem commodi placeat adipisci. Deleniti
-            repudiandae pariatur dicta tempora facere voluptatum itaque
-            distinctio impedit non obcaecati dolore, accusantium quidem quasi
+            At PACO Energy services, our driving force is the shared vision of a
+            greener world powered by renewable energy. Our comprehensive range
+            of services caters to residential, commercial, and industrial
+            clients
           </span>
           <div
             className={`${classes.buttonBox} ${
@@ -108,5 +104,5 @@ const AboutSection = ({ isAboutPage }) => {
     </section>
   );
 };
- 
+
 export default AboutSection;
