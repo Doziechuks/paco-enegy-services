@@ -1,52 +1,107 @@
-.wrapper{
+.mainWrapper {
   width: 100%;
-  height: 8rem;
+  transform: rotate(1deg);
+  background-color: #ff7b00;
+}
+.wrapper {
+  width: 100%;
   background-color: black;
-  border-top: 5px #ff7b00 solid;
-  color: #fff;
+  transform: rotate(-1deg);
+  padding: 1rem 0;
+}
+.titleBox {
+  /* border: 1px red solid; */
+  width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 3rem;
 }
-.title{
+.title {
+  /* border: 1px red solid; */
   text-transform: capitalize;
+  margin: 0 auto;
   margin-bottom: 1rem;
   color: #ff7b00;
   font-size: 2rem;
   user-select: none;
-  animation: update 2s ease-in-out infinite;
+  overflow: hidden;
+  width: 0;
+  padding-right: 0.5rem;
+  border-right: 2px solid white;
+  white-space: nowrap;
+  animation: typing 10s steps(16, end) infinite, blinking 700ms infinite linear;
 }
-@keyframes update {
-  0%{
-    transform: scale(1);
+@keyframes typing {
+  0% {
+    width: 0;
   }
-  50%{
-    transform: scale(1.2);
-  }
-  100%{
-    transform: scale(1);
+
+  10%,
+  100% {
+    width: 15%;
   }
 }
-.info{
+@keyframes blinking {
+  0% {
+    border-color: transparent;
+  }
+
+  30%,
+  70% {
+    border-color: #fff;
+  }
+
+  100% {
+    border-color: transparent;
+  }
+}
+.innerWrapper {
+  /* border: 1px red solid; */
   width: 100%;
-  font-size: 1.5rem;
-  user-select: none;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6rem;
+  overflow: hidden;
 }
-.info span{
-  color: #ff7b00;
-  font-size: 2rem;
+.animationContainer {
+  /* border: 3px blue solid; */
+  width: max-content;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+  flex: 0 0 auto;
+  /* transform: translateX(-100%); */
+  animation: anim 7s linear infinite;
+}
+.list {
+  /* border: 1px white solid; */
+  width: 12rem;
+  height: auto;
+  color: #fff;
+}
+@keyframes anim {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - 5rem));
+  }
 }
 
-@media screen and (max-width: 650px) {
-  .wrapper{
+/* @media screen and (max-width: 650px) {
+  .wrapper {
     padding: 0 1.5em;
   }
-  .title{
+  .title {
     font-size: 1.6rem;
   }
-  .info{
+  .info {
     font-size: 1.3rem;
   }
-}
+} */

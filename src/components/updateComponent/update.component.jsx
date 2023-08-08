@@ -1,17 +1,36 @@
-import classes from './update.module.css';
+import classes from "./update.module.css";
 
 const Update = () => {
   return (
-    <section className={classes.wrapper}>
-      <h2 className={classes.title}>latest update!!</h2>
-      <marquee behavior="smooth" direction="left" className={classes.info}>
-        <span>&#8902;</span>Lorem ipsum dolor sit, amet consectetur adipisicing
-        elit.<span>&#8902;</span> Unde, vel temporibus! Soluta voluptates vel
-        corporis<span>&#8902;</span> Facere cum ex maxime, velit assumenda
-        maiores, hic iusto fuga in minima asperiores sed doloremque!<span>&#8902;</span>
-      </marquee>
+    <section className={classes.mainWrapper}>
+      <div className={classes.wrapper}>
+        <h2 className={classes.title}>latest update!!</h2>
+        <div className={classes.innerWrapper}>
+          {[...Array(2)].map((_, index) => {
+            return (
+              <div key={index} className={classes.animationContainer}>
+                <span className={classes.list}>
+                  {index} Lorem ipsum dolor, sit
+                </span>
+                <span className={classes.list}>
+                  {index + 1} Lorem ipsum dolor,
+                </span>
+                <span className={classes.list}>
+                  {index + 2} Lorem ipsum dolor,
+                </span>
+                <span className={classes.list}>
+                  {index + 3} Lorem ipsum dolor, sit
+                </span>
+                <span className={classes.list}>
+                  {index + 4} Lorem ipsum dolor,
+                </span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
     </section>
   );
-}
- 
+};
+
 export default Update;
