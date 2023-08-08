@@ -1,58 +1,86 @@
-import classes from './subsidiaries.module.css';
+import classes from "./subsidiaries.module.css";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-import { useHistory } from 'react-router-dom';
+import { useHistory } from "react-router-dom";
 
-import { connect } from 'react-redux';
-import { createStructuredSelector } from 'reselect';
-import { selectToggleSubsidiary } from '../../redux/navToggle/navToggleSelector';
-import { handleToggleNavbar, handleToggleSubsidiary } from '../../redux/navToggle/navToggleAction';
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
+import { selectToggleSubsidiary } from "../../redux/navToggle/navToggleSelector";
+import {
+  handleToggleNavbar,
+  handleToggleSubsidiary,
+} from "../../redux/navToggle/navToggleAction";
 
-const Subsidiaries = ({showSubsidiary, isMobile, setShowNavbar, setShowSubsidiary }) => {
-  const [show, setShow] = useState(false);
+const Subsidiaries = (props) => {
+  const {
+    showSubsidiary,
+    isMobile,
+    setShowNavbar,
+    setShowSubsidiary,
+    showSubsidiaryRef,
+    showdropDown,
+  } = props;
   const history = useHistory();
-
-  const handleScroll = () => {
-    if(window.scrollY >= 200) {
-      setShow(true);
-    }else{
-      setShow(false);
-    }
-
-  };
-
-  window.addEventListener('scroll', handleScroll);
+  console.log({ showdropDown });
 
   return (
     <div
-      className={`${classes.container} ${showSubsidiary && classes.show} ${
+      className={`${classes.container} ${showdropDown && classes.show} ${
         isMobile && classes.mobileShowContainer
-      } ${show && classes.open}`}
+      }`}
     >
-      <div className={classes.link} onClick={() => {setShowNavbar(); setShowSubsidiary(); history.push('/services/solarinstallations')}}>
+      <div
+        className={classes.link}
+        onClick={() => {
+          setShowNavbar();
+          // setShowSubsidiary();
+          history.push("/services/solarinstallations");
+        }}
+      >
         Solar installation and maintenance
       </div>
       <hr />
-      <div className={classes.link} onClick={() => {setShowNavbar(); setShowSubsidiary(); history.push('/services/CCTVinstallations')}}>
+      <div
+        className={classes.link}
+        onClick={() => {
+          setShowNavbar();
+          // setShowSubsidiary();
+          history.push("/services/CCTVinstallations");
+        }}
+      >
         CCTV installation
       </div>
       <hr />
-      <div className={classes.link} onClick={() => {setShowNavbar(); setShowSubsidiary(); history.push("/services/generalhousewiring");}}>
+      <div
+        className={classes.link}
+        onClick={() => {
+          setShowNavbar();
+          // setShowSubsidiary();
+          history.push("/services/generalhousewiring");
+        }}
+      >
         General house wiring
       </div>
       <hr />
-      <div className={classes.link} onClick={() => {setShowNavbar(); setShowSubsidiary(); history.push("/services/partnership");}}>
+      <div
+        className={classes.link}
+        onClick={() => {
+          setShowNavbar();
+          // setShowSubsidiary();
+          history.push("/services/partnership");
+        }}
+      >
         Partnership
       </div>
     </div>
   );
-}
- 
+};
+
 const mapStateToProps = createStructuredSelector({
   showSubsidiary: selectToggleSubsidiary,
 });
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
   setShowNavbar: () => dispatch(handleToggleNavbar()),
   setShowSubsidiary: () => dispatch(handleToggleSubsidiary()),
 });

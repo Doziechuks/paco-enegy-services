@@ -10,18 +10,20 @@
   z-index: 10;
   transform: translateY(20%);
   opacity: 0;
+  visibility: hidden;
   transition: all 0.5s ease-in-out;
 }
 
 .show {
   transform: translateY(-4%);
   opacity: 1;
+  visibility: visible;
 }
-.open{
+.open {
   transition: all 0.5s ease-in-out;
   display: none;
 }
-.openSub{
+.openSub {
   transition: all 0.5s ease-in-out;
   display: block;
 }
@@ -31,11 +33,11 @@
   padding: 0.5rem;
   transition: 0.5s ease-in-out;
 }
-.link:hover{
+.link:hover {
   background-color: #ff7b00;
   padding-left: 1rem;
 }
-hr{
+hr {
   margin: 0.5rem 0;
 }
 @media screen and (max-width: 1000px) {
@@ -63,7 +65,7 @@ hr{
     line-height: 2rem;
     padding: 0;
   }
-  hr{
+  hr {
     margin: 0;
   }
 }
