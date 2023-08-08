@@ -1,15 +1,14 @@
-import { useState } from 'react';
-import classes from './coreValues.module.css';
+import { useState } from "react";
+import classes from "./coreValues.module.css";
 
 const CoreValues = () => {
-
   const [showScroll, setShowScroll] = useState(false);
   const [showMobileScroll, setShowMobileScroll] = useState(false);
 
   const handleScroll = () => {
-    if(window.scrollY >= 500){
+    if (window.scrollY >= 500) {
       setShowScroll(true);
-    }else{
+    } else {
       setShowScroll(false);
     }
     if (window.scrollY >= 1200) {
@@ -18,7 +17,7 @@ const CoreValues = () => {
       setShowMobileScroll(false);
     }
   };
-  window.addEventListener('scroll', handleScroll);
+  window.addEventListener("scroll", handleScroll);
 
   return (
     <div
@@ -28,13 +27,21 @@ const CoreValues = () => {
     >
       <h2>our core values</h2>
       <ul className={classes.values}>
-        <li>Lorem amet, consectetur adipisicing elit.</li>
-        <li>Lorem ipsum dolor adipisicing consectetur adipisicing.</li>
-        <li>Lorem ipsum dolor consectetur sit amet, elit.</li>
-        <li>Lorem ipsum consect adipisicing dolor sit amet.</li>
+        <li>
+          <b>Sustainability:</b>Prioriting renewable energy for a greener world.
+        </li>
+        <li>
+          <b>Innovation:</b> We excel by advancing solar technology.
+        </li>
+        <li>
+          <b>Customers First:</b> We guide and support our clients.
+        </li>
+        <li>
+          <b>Empowerment:</b> Together, we drive solar progress.
+        </li>
       </ul>
     </div>
   );
-}
- 
+};
+
 export default CoreValues;

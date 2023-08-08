@@ -8,11 +8,11 @@
   transform: translateX(100%);
   transition: all 1s ease-in-out;
 }
-.gap{
-   transform: translateX(0);
+.gap {
+  transform: translateX(0);
 }
-.show{
-   transform: translateX(0);
+.show {
+  transform: translateX(0);
 }
 .container h2 {
   color: #ff7b00;
@@ -26,19 +26,20 @@
   font-size: 1.1rem;
   color: grey;
   line-height: 2rem;
+  text-align: justify;
 }
 
 @media screen and (max-width: 650px) {
-  .show{
-   transform: translateX(100%);
-}
-.mobileShow{
-   transform: translateX(0);
-}
+  .show {
+    transform: translateX(100%);
+  }
+  .mobileShow {
+    transform: translateX(0);
+  }
   .gap {
     margin: 2.5rem 0;
   }
-  .container h2{
+  .container h2 {
     margin-bottom: 1rem;
   }
 }
