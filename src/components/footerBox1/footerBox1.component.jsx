@@ -1,4 +1,4 @@
-import classes from './footerBox1.module.css';
+import classes from "./footerBox1.module.css";
 
 import { useHistory } from "react-router-dom";
 
@@ -9,8 +9,8 @@ import { AiFillInstagram } from "react-icons/ai";
 import { IoLogoWhatsapp } from "react-icons/io";
 
 const FooterBox1 = () => {
-   const history = useHistory();
-   
+  const history = useHistory();
+
   return (
     <div className={classes.box1}>
       <img
@@ -20,22 +20,23 @@ const FooterBox1 = () => {
         onClick={() => history.push("/")}
       />
       <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore, ad
-        neque numquam enim architecto, reiciendis ipsam totam ea inventor
+        PACO Energy services is a forward-thinking solar installation company on
+        a mission to revolutionize the way individuals and businesses access
+        clean, renewable energy.
       </p>
       <div className={classes.socialmediaBox}>
-        <a href="#">
+        <span href="#">
           <BsFacebook className={classes.mediaIcons} />
-        </a>
-        <a href="#">
+        </span>
+        <span href="#">
           <AiFillInstagram className={classes.mediaIcons} />
-        </a>
-        <a href="#">
+        </span>
+        <span href="#">
           <IoLogoWhatsapp className={classes.mediaIcons} />
-        </a>
+        </span>
       </div>
     </div>
   );
-}
- 
+};
+
 export default FooterBox1;

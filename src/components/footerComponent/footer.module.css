@@ -1,9 +1,10 @@
-.wrapper{
+.wrapper {
+  /* border: 11px red solid; */
   width: 100%;
-  padding:  4rem 3rem;
-   background-color: #1A1C20;
+  padding: 4rem 3rem;
+  background-color: #1a1c20;
 }
-.container{
+.container {
   width: 100%;
   display: flex;
   align-items: flex-start;
@@ -11,13 +12,13 @@
   color: #fff;
   margin-bottom: 3.5rem;
 }
-.copyRight{
+.copyRight {
   width: 100%;
   text-align: center;
   color: #fff;
   margin-top: 1.5rem;
 }
-.copyRight span{
+.copyRight span {
   color: #ff7b00;
 }
 
@@ -25,14 +26,14 @@
   .wrapper {
     flex-wrap: wrap;
     gap: 4rem;
+    padding: 4rem 2rem;
   }
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 920px) {
   .wrapper {
     padding: 3rem 1.5rem;
-   
   }
-  .container{
- flex-direction: column;
+  .container {
+    flex-direction: column;
   }
 }

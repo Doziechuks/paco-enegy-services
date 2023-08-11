@@ -1,42 +1,44 @@
-.box2{
+.box2 {
+  /* border: 1px red solid; */
   width: 100%;
   max-width: 20rem;
   margin: 0 6rem;
   flex: 0 0 auto;
 }
 
-.box2 h2{
+.box2 h2 {
   text-transform: capitalize;
   color: #ff7b00;
   margin-bottom: 1.5rem;
 }
-.box2 ul{
+.box2 ul {
   width: 100%;
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.box2 ul li{
+.box2 ul li {
   line-height: 2rem;
   cursor: pointer;
   text-transform: capitalize;
   transition: all 0.5s ease-in-out;
 }
-.box2 ul li:hover{
+.box2 ul li:hover {
   background-color: #ff7b00;
   padding: 0 0.7rem;
 }
-hr{
+hr {
   margin: 0.5rem 0;
 }
 
 @media screen and (max-width: 1200px) {
-  .box2{
+  .box2 {
+    width: 17rem;
     margin: 0;
   }
 }
-@media screen and (max-width: 650px) {
-  .box2{
+@media screen and (max-width: 920px) {
+  .box2 {
     margin: 3rem 0;
   }
 }

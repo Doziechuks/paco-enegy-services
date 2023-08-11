@@ -1,4 +1,5 @@
-.box1{
+.box1 {
+  /* border: 1px red solid; */
   width: 100%;
   max-width: 20rem;
   flex: 0 0 auto;
@@ -12,31 +13,37 @@
   margin-bottom: 1.5rem;
   cursor: pointer;
 }
-.box1 p{
+.box1 p {
   width: 100%;
   line-height: 1.5rem;
   text-align: justify;
   margin-bottom: 1.5rem;
 }
-.socialmediaBox{
+.socialmediaBox {
   width: 100%;
 }
-.socialmediaBox a .mediaIcons{
+.socialmediaBox span .mediaIcons {
   font-size: 2rem;
   margin-right: 1rem;
   color: #fff;
   transition: 0.5s ease-in-out;
 }
 
-@media screen and (max-width: 1000px) {
-.logo {
-  max-width: 5rem;
-  height: 5rem;
-}
+@media screen and (max-width: 1200px) {
+  .box1 {
+    max-width: 16rem;
+  }
+  .logo {
+    max-width: 5rem;
+    height: 5rem;
+  }
+  .box1 p {
+    text-align: start;
+  }
 }
 @media screen and (max-width: 650px) {
-.logo {
-  max-width: 4rem;
-  height: 4rem;
-}
+  .logo {
+    max-width: 4rem;
+    height: 4rem;
+  }
 }
