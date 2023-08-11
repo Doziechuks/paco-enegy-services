@@ -1,25 +1,27 @@
-import './App.css';
-import Navbar from './components/navbarComponent/navbar.component';
-import Footer from './components/footerComponent/footer.component';
-import HomePage from './pages/homePage/hompage';
-import AboutPage from './pages/aboutPage/aboutPage';
-import ContactPage from './pages/contactPage/contactPage';
-import ServicesPage from './pages/servicesPage/servicesPage';
+import React, { lazy, Suspense, useState } from "react";
+import { Switch, Route } from "react-router-dom";
+import "./App.css";
 
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaAngleUp } from "react-icons/fa";
 
-import { Switch, Route } from 'react-router-dom';
-import { useState } from 'react';
+import Navbar from "./components/navbarComponent/navbar.component";
+import Footer from "./components/footerComponent/footer.component";
+import Spinner from "./components/spinner/Spinner";
+
+const HomePage = lazy(() => import("./pages/homePage/hompage"));
+const AboutPage = lazy(() => import("./pages/aboutPage/aboutPage"));
+const ContactPage = lazy(() => import("./pages/contactPage/contactPage"));
+const ServicesPage = lazy(() => import("./pages/servicesPage/servicesPage"));
 
 function App() {
   const [scrollUp, setScrollUp] = useState(false);
   const [arrowScrollUp, setArrowScrollUp] = useState(false);
 
   const handleScroll = () => {
-    if(window.scrollY >= 50){
+    if (window.scrollY >= 50) {
       setScrollUp(true);
-    }else{
+    } else {
       setScrollUp(false);
     }
     if (window.scrollY >= 50) {
@@ -27,13 +29,13 @@ function App() {
     } else {
       setArrowScrollUp(false);
     }
-  }
-  window.addEventListener('scroll', handleScroll);
+  };
+  window.addEventListener("scroll", handleScroll);
 
   const handleScrollTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   };
 
@@ -51,14 +53,17 @@ function App() {
       >
         <FaAngleUp className="arrowUp" />
       </div>
-      <Navbar />
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route exact path="/about" component={AboutPage} />
-        <Route exact path="/contactus" component={ContactPage} />
-        <Route exact path="/services/:servicesId" component={ServicesPage} />
-      </Switch>
-      <Footer />
+
+      <Suspense fallback={<Spinner />}>
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/about" component={AboutPage} />
+          <Route exact path="/contactus" component={ContactPage} />
+          <Route exact path="/services/:servicesId" component={ServicesPage} />
+        </Switch>
+        <Footer />
+      </Suspense>
     </div>
   );
 }
