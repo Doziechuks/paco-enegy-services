@@ -1,23 +1,25 @@
 .mainWrapper {
+  /* border: 11px red solid; */
   width: 100%;
   transform: rotate(1deg);
   background-color: #ff7b00;
 }
 .wrapper {
+  /* border: 11px red solid; */
   width: 100%;
   background-color: black;
   transform: rotate(-1deg);
   padding: 1rem 0;
 }
-.titleBox {
-  /* border: 1px red solid; */
+/* .titleBox {
+  border: 11px red solid;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 .title {
-  /* border: 1px red solid; */
+  border: 1px red solid;
   text-transform: capitalize;
   margin: 0 auto;
   margin-bottom: 1rem;
@@ -56,7 +58,7 @@
   }
 }
 .innerWrapper {
-  /* border: 1px red solid; */
+  border: 1px red solid;
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
@@ -73,10 +75,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 5rem;
+  gap: 4.9rem;
   flex: 0 0 auto;
   /* transform: translateX(-100%); */
   animation: anim 7s linear infinite;
+}
+.wrapper .innerWrapper:hover .animationContainer {
+  animation-play-state: paused;
 }
 .list {
   /* border: 1px white solid; */
@@ -90,18 +95,96 @@
   }
 
   to {
-    transform: translateX(calc(-100% - 5rem));
+    transform: translateX(calc(-100% - 4.8rem));
   }
 }
-
-/* @media screen and (max-width: 650px) {
-  .wrapper {
-    padding: 0 1.5em;
-  }
+@media screen and (max-width: 1400px) {
   .title {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
-  .info {
+  @keyframes typing {
+    0% {
+      width: 0;
+    }
+
+    10%,
+    100% {
+      width: 23%;
+    }
+  }
+}
+@media screen and (max-width: 850px) {
+  .title {
     font-size: 1.3rem;
   }
-} */
+  @keyframes typing {
+    0% {
+      width: 0;
+    }
+
+    10%,
+    100% {
+      width: 20%;
+    }
+  }
+}
+@media screen and (max-width: 650px) {
+  @keyframes typing {
+    0% {
+      width: 0;
+    }
+
+    10%,
+    100% {
+      width: 25%;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  @keyframes typing {
+    0% {
+      width: 0;
+    }
+
+    10%,
+    100% {
+      width: 27%;
+    }
+  }
+}
+@media screen and (max-width: 530px) {
+  @keyframes typing {
+    0% {
+      width: 0;
+    }
+
+    10%,
+    100% {
+      width: 30%;
+    }
+  }
+}
+@media screen and (max-width: 460px) {
+  @keyframes typing {
+    0% {
+      width: 0;
+    }
+
+    10%,
+    100% {
+      width: 35%;
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  @keyframes typing {
+    0% {
+      width: 0;
+    }
+
+    10%,
+    100% {
+      width: 40%;
+    }
+  }
+}

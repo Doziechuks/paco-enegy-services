@@ -9,21 +9,11 @@ const Update = () => {
           {[...Array(2)].map((_, index) => {
             return (
               <div key={index} className={classes.animationContainer}>
-                <span className={classes.list}>
-                  {index} Lorem ipsum dolor, sit
-                </span>
-                <span className={classes.list}>
-                  {index + 1} Lorem ipsum dolor,
-                </span>
-                <span className={classes.list}>
-                  {index + 2} Lorem ipsum dolor,
-                </span>
-                <span className={classes.list}>
-                  {index + 3} Lorem ipsum dolor, sit
-                </span>
-                <span className={classes.list}>
-                  {index + 4} Lorem ipsum dolor,
-                </span>
+                <span className={classes.list}>Price alart changes</span>
+                <span className={classes.list}>New product arrivals</span>
+                <span className={classes.list}>changes in exchange rates</span>
+                <span className={classes.list}>maintenace and services</span>
+                <span className={classes.list}>durable product alart</span>
               </div>
             );
           })}
