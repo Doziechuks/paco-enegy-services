@@ -8,8 +8,18 @@ import PageHeading from '../pageHeading/pageHeading.component';
 import ContactForm from '../../components/contactForm/contactForm.component';
 import Address from '../../components/address/address.component';
 import Compliment from '../../components/compliment/compliment.component';
+import { Seo } from '../../seo';
+import { useEffect } from 'react';
 
 const ContactPage = ({ success }) => {
+  useEffect(() => {
+    Seo({
+      title:
+        "contact us || PACO energy services",
+      metaDescription:
+        "PACO buy items ranging from Electronics, footwares, baby wares and many more from around the globe and get it shipped to your doorstep in Africa",
+    });
+  }, []);
 
   return (
     <section className={classes.wrapper}>

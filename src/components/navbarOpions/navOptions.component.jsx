@@ -3,7 +3,7 @@ import classes from "./navbarOptions.module.css";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { FaAngleUp, FaAngleDown } from "react-icons/fa";
 import Subsidiaries from "../subsidiaries/subsidiaries.component";
 
@@ -15,16 +15,36 @@ import {
 } from "../../redux/navToggle/navToggleAction";
 import { selectToggleSubsidiary } from "../../redux/navToggle/navToggleSelector";
 
-const NavbarOptions = ({
-  mobileNav,
-  showSubsidiary,
-  setShowNavbar,
-  setShowSubsidiary,
-  setShow,
-}) => {
+const NavbarOptions = (props) => {
+  const {
+    mobileNav,
+    showSubsidiary,
+    setShowNavbar,
+    setShowSubsidiary,
+    setShow,
+  } = props;
   const [scrollNav, setScrollNav] = useState(false);
   const [path, setPathName] = useState("");
+  const [showdropDown, setShowDropDown] = useState(false);
   const { pathname } = useLocation();
+  // const [showSub, setShowSub] = useState(false);
+  const showSubsidiaryRef = useRef(false);
+
+  const handleClick = () => {
+    setShowDropDown((prev) => !prev);
+  };
+
+  useEffect(() => {
+    const handleMouseDown = (event) => {
+      if (!event.target.closest(`.${classes.testDropdown}`)) {
+        setShowDropDown(false);
+      }
+    };
+    document.addEventListener("mousedown", handleMouseDown);
+    return () => {
+      document.removeEventListener("mousedown", handleMouseDown);
+    };
+  }, []);
 
   useEffect(() => {
     setPathName(pathname);
@@ -45,6 +65,8 @@ const NavbarOptions = ({
     }
   };
   window.addEventListener("scroll", changeBackground);
+
+  // console.log({ sub: showSub, show: showSubsidiary });
 
   return (
     <div
@@ -71,11 +93,14 @@ const NavbarOptions = ({
         about <span></span>
       </Link>
       <div
-        className={`${classes.links} ${scrollNav ? classes.change : ""} ${
-          mobileNav ? classes.mobileLinks : ""
-        } ${path.includes("/services") ? classes.active : ""}`}
+        className={`${classes.testDropdown} ${classes.links} ${
+          scrollNav ? classes.change : ""
+        } ${mobileNav ? classes.mobileLinks : ""} ${
+          path.includes("/services") ? classes.active : ""
+        }`}
         onClick={() => {
-          setShowSubsidiary();
+          handleClick();
+          // setShowSubsidiary();
           handleScrollTop();
         }}
       >
@@ -100,7 +125,7 @@ const NavbarOptions = ({
       >
         contact <span></span>
       </Link>
-      <Subsidiaries isMobile />
+      <Subsidiaries isMobile showdropDown={showdropDown} />
     </div>
   );
 };
